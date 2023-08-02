@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8" />
+            <meta
+                  name="viewport"
+                  content="width=device-width, initial-scale=1.0"
+            />
+            <link rel="stylesheet" href="unit-v.css" />
+            <title>Operating System Notes</title>
+      </head>
+      <body>
+            <!-- Navigation Menu -->
+            <nav>
+                  <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="unit-i.html">Unit-I </a></li>
+                        <li><a href="unit-ii.html">Unit-II</a></li>
+                        <li><a href="unit-iii.html">Unit-III</a></li>
+                        <li><a href="unit-iv.html">Unit-IV</a></li>
+                        <li><a href="unit-v.html">Unit-V: Deadlocks</a></li>
+                  </ul>
+            </nav>
+
+            
+<h1>Operating Systems </h1>
+   <h2>Unit -V Deadlock notes </h2> 
+
+    <h2>Instructor: Bharat Kumar</h2>
+
+
+<div><iframe width="560" height="315" src="https://www.youtube.com/embed/X9W4EfiLTyU" title="How to become an Assistant Professor (Lecturer)  | UGC NET | SET | Eligibility | Salary" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>    
+
+<br>
+<br><p>Syllabus: Deadlocks - System Model, Deadlock Characterization, Methods for Handling Deadlocks, Deadlock Prevention, Deadlock Avoidance, Deadlock Detection and Recovery from Deadlock
+</p>
+
+<p class="definition"> <mark> <blockquote> <font color="red"> Deadlocks </font>  are situations in concurrent systems where two or more processes are unable to proceed because each is waiting for the other to release a resource. Deadlocks can occur in systems with shared resources, such as memory, files, or hardware devices, and they can lead to a complete halt of the system. </blockquote></mark></p>
+
+<dl>
+    5.1 Deadlocks	 <br>
+    5.2 Deadlock Characterization	 <br>
+    5.3 Methods for Handling Deadlocks	 <br>
+    5.4 Deadlock Prevention	 <br>
+    5.5 Deadlock Avoidance	 <br>
+    5.6 Deadlock Detection and Recovery	 <br>
+</dl>
+
+
+
+.
+
+
+<h3>5.1 Deadlocks</h3>
+
+<p>In a multiprogramming environment, several threads may compete for a finite number of resources. A thread requests resources; if the resources are not available at that time, the thread enters a waiting state. Sometimes, a waiting thread can never again change state, because the resources it has requested are held by other waiting threads. This situation is called a <font color="red"> deadlock </font>. 
+    deadlock is a situation in which every process in a set of processes is waiting for an event that can be caused only by another process in the set.
+    </p>
+
+
+<p>a thread may utilize a resource in only the following sequence:</p>
+<p> <b> Request.</b> The thread requests the resource. If the request cannot be granted immediately (for example, if a mutex lock is currently held by another thread), then the requesting thread must wait until it can acquire the resource.
+   <br> <b> Use.</b> The thread can operate on the resource (for example, if the resource is a mutex lock, the thread can access its critical section).
+   <br> <b>Release.</b> The thread releases the resource.</p>
+
+
+   <br> <b>System Model: </b> <br>
+    In the context of deadlocks, the system model includes the following components:
+   <br> <b>Processes:</b>  A set of processes in the system, each requiring resources to complete its execution.
+   <br> <b>Resources:</b>  These can be physical resources like memory, CPU, and I/O devices or abstract resources like semaphores or mutexes.
+   <br> <b> Request and Release:</b> Each process can request and release resources during its execution.
+   <br> <b>Hold and Wait:</b>  Processes can hold resources while waiting for additional resources.
+   <br> <b>Circular Wait:</b>  There exists a circular chain of processes, with each process holding a resource that is requested by the next process in the chain.
+    </p>
+
+
+
+<h3>5.2 Deadlock Characterization:</h3>
+<p>Four Necessary Conditions:</p>
+
+
+<p>A deadlock situation can arise if the following four conditions hold simultane-ously in a system:</p>
+
+<p><b>1. Mutual exclusion:</b> At least one resource must be held in a nonsharable mode; that is, only one thread at a time can use the resource. If another thread requests that resource, the requesting thread must be delayed until the resource has been released.
+    <br> <b>2. Hold and wait:</b> A thread must be holding at least one resource and waiting to acquire additional resources that are currently being held by other threads.
+   <br> <b>3. No preemption:</b> Resources cannot be preempted; that is, a resource can be released only voluntarily by the thread holding it, after that thread has completed its task.
+   <br> <b>4. Circular wait</b>  A set {T0 , T1 , ..., Tn } of waiting threads must exist such that T0 is waiting for a resource held by T1, T1 is waiting for a resource held by T2, ..., Tn−1 is waiting for a resource held by Tn, and Tn is waiting for a resource held by T0.
+    </p>
+
+
+
+
+
+
+
+<p> <h3>5.3 Methods for Handling Deadlocks: </h3>
+    There are three general approaches to handle deadlocks: <br>
+    Deadlock Prevention: Design the system in such a way that at least one of the deadlock conditions cannot occur. This requires restricting the way processes request and use resources.
+   <br> <b>Deadlock Avoidance:</b> At runtime, make decisions on resource allocation based on resource availability and process needs to avoid the possibility of deadlocks.
+   <br> <b>Deadlock Detection and Recovery:</b> Allow deadlocks to occur, but periodically check for deadlock existence, and if found, use recovery mechanisms to break the deadlock and resume system operation.
+    </p>
+
+<p><h3>5.4 Deadlock Prevention: </h3> 
+    To prevent deadlocks, we can apply various strategies: <br>
+   <br> <b>Mutual Exclusion Relaxation:</b> Allow some resources to be shareable among processes, so mutual exclusion is not strictly enforced for all resources.
+   <br> <b>Hold and Wait Restriction:</b> A process must request all required resources before starting execution, preventing the hold and wait condition.
+   <br> <b>No Preemption:</b>Resources can be preempted from a process if necessary, but this approach may lead to other issues like starvation.
+   <br> <b>Circular Wait Avoidance: </b> Assign a global ordering to all resources and enforce that each process requests resources in a specific order.
+    </p>
+
+
+<h3>5.5 Deadlock Avoidance:</h3>  
+<p>
+   <br> Deadlock avoidance requires a more dynamic approach. The system predicts the potential for deadlock before granting resource requests based on available resources, future resource requests, and the current state of the system. The two most commonly used algorithms for deadlock avoidance are:
+   <br>  <b>Banker's Algorithm:</b> Based on resource allocation and future requests, the system simulates the process of granting resources to check if a state leading to deadlock can be reached.
+   <br> <b>Resource Allocation Graph (RAG) Algorithm:</b> Represents resources and processes as a graph and checks for cycles in the graph to identify potential deadlocks.
+    </p>
+    <p><b>Resource-allocation graph</b>:  This graph consists of a set of vertices V and a set of edges E. The set of vertices V is partitioned into two different types of nodes: T = {T1, T2, ..., Tn}, the set consisting of all the active threads in the system, and R = {R1, R2, ..., Rm}, the set consisting of all resource types in the system.
+        A directed edge from thread Ti to resource type Rj is denoted by Ti → Rj; it signifies that thread Ti has requested an instance of resource type Rj and is currently waiting for that resource. A directed edge from resource type Rj to thread Ti is denoted by Rj → Ti; it signifies that an instance of resource type Rj has been allocated to thread Ti. A directed edge Ti → Rj is called a <font color="red"> request edge </font> ; a directed edge Rj → Ti is called an <font color="red">assignment edge</font>.
+         </p>
+<h3>5.6 Deadlock Detection and Recovery:</h3>
+<p>In this approach, deadlocks are allowed to occur, but the system periodically checks for their existence. If a deadlock is detected, the system uses one of the following methods for recovery:
+   <br> <b>Process Termination: </b> Terminate one or more processes involved in the deadlock to release their resources.
+   <br> <b>Resource Preemption:</b> Preempt some resources from processes to break the circular wait condition.</p>
+</p>
+    </body>
+</html>
+
+
+
+
+
+

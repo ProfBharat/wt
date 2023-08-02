@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8" />
+            <meta
+                  name="viewport"
+                  content="width=device-width, initial-scale=1.0"
+            />
+            <link rel="stylesheet" href="index.css" />
+            <title>Operating System Notes</title>
+      </head>
+      <body>
+            <!-- Navigation Menu -->
+            <nav>
+                  <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="unit-i.html">Unit-I </a></li>
+                        <li><a href="unit-ii.html">Unit-II</a></li>
+                        <li><a href="unit-iii.html">Unit-III</a></li>
+                        <li><a href="unit-iv.html">Unit-IV</a></li>
+                        <li><a href="unit-v.html">Unit-V: Deadlocks</a></li>
+                  </ul>
+            </nav>
+
+            <h1>Operating Systems <br>Unit -II notes </br> Instructor: Bharat Kumar </h1>
+
+            <br><br><b>Syllabus: </b>Process and CPU Scheduling - Process concepts - The Process, Process State, Process Control Block, Threads, Process Scheduling - Scheduling Queues, Schedulers, Context Switch, Preemptive Scheduling, Dispatcher, Scheduling Criteria, Scheduling algorithms, Case studies: Linux, Windows.</br></br>
+Process Coordination - Process Synchronization, The Critical section Problem, Synchronization Hardware, Semaphores, and Classic Problems of Synchronization, Monitors, Case Studies: Windows.
+
+
+
+<p>
+      <br><b>Process:</b></br>
+      In computing, a process refers to a running instance of a computer program. It is an independent, isolated unit that consists of its own memory space, code, data, and system resources. Each process executes a specific task or job and operates in its own virtual environment, isolated from other processes. Processes allow the operating system to manage multiple tasks concurrently.
+      <br>2. Process State:</br>
+</p>
+<p>A process can be in one of several states during its lifecycle, and the state represents the current condition of the process. The typical process states are:</p>
+
+
+
+<ol>
+      <br><b>Running:</b> The process is currently being executed by the CPU.</br>
+      <br><b>Ready:</b> The process is prepared to be executed but is waiting for the CPU to become available.</br>
+      <br><b>Blocked</b> (or Waiting): The process is waiting for a certain event (e.g., user input, I/O completion) to occur before it can continue its execution.</br>
+      <br><b>Terminated (or Exit):</b> The process has completed its execution and has been terminated. After termination, its resources are released, and it no longer exists in the system.</br>
+      Processes can transition between these states based on various events, such as I/O requests, timer interrupts, or the scheduler's decisions.
+</ol>
+
+
+<p>
+      <br>3. <b>Process Control Block (PCB):</b></br>
+      A Process Control Block (PCB) is a data structure used by the operating system to store and manage information about a specific process. Each process in the system has its PCB, which includes various pieces of information, such as:
+</p>
+
+<ol>
+      <br><b>Process ID (PID):</b> A unique identifier assigned to each process.</br>
+      <br><br><b>Process state:</b> The current state of the process (e.g., running, ready, blocked).</br></br>
+      <br><b>Program Counter (PC):</b> The address of the next instruction to be executed.</br>
+      <br><b>CPU Registers:</b> The contents of the processor's registers at the time of interruption.</br>
+      <br><b>Memory Management Information:</b> Details about the process's memory allocation.</br>
+      <br><b>I/O Information: The process's I/O devices and their status.</b></br>
+      <br><b>Accounting Information:</b> Resource usage statistics, like CPU time consumed.</br>
+      The PCB allows the operating system to save and restore the state of a process efficiently during context switches or when a process is interrupted and later resumed.
+</ol>
+
+
+<p>
+      <br>4. Threads:</br>
+      Threads are the smallest units of a process, and they represent individual execution paths within the process. Unlike separate processes, threads within the same process share the same memory space and system resources, making communication between threads more efficient than between processes. Threads can execute concurrently, allowing for better utilization of multi-core processors and improved performance.
+      Threads within a process share the same code and data, including file descriptors, while having their own registers and a separate thread ID (TID). Threads can run concurrently, and the operating system schedules them for execution on available CPU cores. Multithreading allows for parallel execution of different parts of a program, enhancing responsiveness and scalability.
+</p>
+
+ <p>
+       <br>Scheduling Queues:</br>
+       Scheduling queues are data structures used by the operating system to organize processes or threads based on their current state. The typical scheduling queues are:
+ </p>
+
+ <ol>
+       <br>Job Queue: Contains all processes in the system, including those waiting to be admitted.</br>
+       <br>Ready Queue: Holds processes that are ready to execute but are waiting for CPU time.</br>
+       <br>Blocked Queue (or Waiting Queue): Keeps processes that are waiting for a certain event (e.g., I/O completion) before they can proceed.</br>
+       <br>Suspended Queue: Holds processes that are temporarily suspended, often due to some user or system action.</br>
+       <br>Terminated Queue: Contains processes that have finished their execution and are waiting to be removed from the system.</br>
+       <br>Processes move between these queues based on their state changes, and the scheduler is responsible for deciding which process gets CPU time from the ready queue.</br>
+ </ol>
+
+<p>
+      <br>2. Schedulers:</br>
+      <br><br>Schedulers are components of the operating system responsible for deciding which process or thread should run next on the CPU. The main types of schedulers are:</br></br>
+      <br>Long-Term Scheduler (Job Scheduler): This scheduler selects processes from the job queue and admits them to the system. It determines which processes will be loaded into memory for execution. The long-term scheduler is less frequent but crucial for overall system performance.</br>
+      <br>Short-Term Scheduler (CPU Scheduler): The short-term scheduler selects processes from the ready queue and allocates CPU time to them. It determines which process will execute on the CPU for a short period (time slice or quantum) before being interrupted and replaced by another process.</br>
+      <br>Medium-Term Scheduler: Not all operating systems have this scheduler. It deals with the processes that are suspended or swapped out to secondary memory (e.g., disk) and decides when to bring them back into memory or terminate them.</br>
+</p>
+
+
+<p>
+      <br><b>3. Context Switch:</b></br>
+      A context switch is the process of saving the current state (context) of a running process or thread and loading the state of another process or thread so that it can continue execution. Context switches occur when the operating system switches the CPU from one process to another, which happens during process scheduling. Context switches add overhead to the system but are necessary for multitasking and time-sharing environments.
+</p>
+
+
+<p>
+      <br><b>4. Preemptive Scheduling:</b></br>
+      Preemptive scheduling is a type of scheduling in which the operating system can interrupt a running process and force it to give up the CPU so that another process can run. The OS can make this decision based on priority levels or time quantum. Preemptive scheduling ensures fairer CPU allocation, responsiveness, and the ability to prioritize critical processes. It is commonly used in modern multitasking operating systems.
+      
+<b></p></b>
+
+<p>
+      <br><b>5. Dispatcher:</b></br>
+      The dispatcher is a component of the operating system that performs the context switch during the scheduling process. When the scheduler selects a new process to run, the dispatcher is responsible for saving the current process's context, loading the context of the selected process, and starting its execution on the CPU.
+</p>
+
+<p>
+      <br><b>6. Scheduling Criteria:</b></br>
+      Schedulers use various criteria to determine the order in which processes are executed. Common scheduling criteria include:
+      <br><b>CPU Burst Time:</b> The amount of time a process needs to execute before it can be preempted or blocked.</br>
+      <br><b>Priority:</b> Each process may be assigned a priority, and the scheduler can use these priorities to determine which process gets CPU time first.</br>
+      <br><b>Deadline: </b>Some real-time systems have strict deadlines for certain processes, and the scheduler must ensure these deadlines are met.</br>
+      <br><b>Waiting Time:</b> The amount of time a process has spent waiting in the ready queue. Processes with longer waiting times may be given preference (e.g., to avoid starvation).</br>
+      <br><b>Turnaround Time: </b>The time taken from process arrival to its completion. Minimizing turnaround time can be a scheduling goal.</br>
+</p>
+<ol>
+      <br><br><b><b>1. First-Come-First-Serve (FCFS):</b></b></br></br>
+      In FCFS scheduling, processes are executed in the order they arrive in the ready queue. The process that arrives first gets the CPU first. It is a non-preemptive algorithm, meaning a process will run until it completes its execution or voluntarily releases the CPU.
+      Example:
+      Consider three processes arriving in the order P1, P2, and P3, with burst times 6, 4, and 8, respectively. The scheduling order would be: P1 -> P2 -> P3.
+      <br><b>2. Shortest Job Next (SJN) / Shortest Job First (SJF):</b></br>
+      SJN is a non-preemptive scheduling algorithm that selects the process with the shortest burst time from the ready queue. It optimizes for minimizing average waiting time.
+      Example:
+      Suppose we have three processes with burst times: P1 (3 units), P2 (1 unit), and P3 (4 units). The scheduling order would be: P2 -> P1 -> P3.
+      <br><b>3. Round Robin (RR):</b></br>
+      Round Robin is a preemptive scheduling algorithm that allocates a fixed time slice (quantum) to each process in the ready queue. If a process doesn't complete within its time slice, it is moved to the back of the queue, allowing other processes to run.
+      Example:
+      Assume three processes with burst times: P1 (8 units), P2 (4 units), and P3 (6 units). Using a time slice of 2 units, the scheduling order might be: P1 -> P2 -> P3 -> P1 -> P3 -> P1 -> P3, and so on.
+      <br><b>4. Priority Scheduling:</b></br>
+      Priority scheduling assigns a priority value to each process. The process with the highest priority gets the CPU first. It can be preemptive or non-preemptive.
+      Example:
+      Consider three processes with priorities: P1 (Priority 3), P2 (Priority 1), and P3 (Priority 2). The scheduling order could be: P2 -> P3 -> P1.
+      <br><b>5. Priority Preemptive Scheduling:</b></br>
+      This is similar to priority scheduling, but it is preemptive. If a higher-priority process arrives or becomes ready, it preempts the currently running process.
+      Example:
+      Three processes with priorities: P1 (Priority 2), P2 (Priority 1), and P3 (Priority 3). If P3 arrives while P2 is running, the scheduling order might change to: P3 -> P2 -> P1.
+      <br><b>6. Multilevel Queue Scheduling:</b></br>
+      In this algorithm, processes are divided into different queues, and each queue may have its scheduling algorithm and priorities. Processes move between the queues based on their characteristics or priorities.
+      Example:
+      Consider two queues: High priority (Priority-based scheduling) and Low priority (FCFS). High-priority processes get executed first, and low-priority processes are scheduled once the high-priority queue is empty.
+      <br><b>7. Multilevel Feedback Queue Scheduling:</b></br>
+      Similar to multilevel queue scheduling, but with the ability for processes to move between queues based on their behavior. For instance, long-running processes might get demoted to a lower-priority queue to provide fair CPU time to other processes.
+      Example:
+      Processes start in the highest priority queue. If a process doesn't complete its burst within the time slice, it gets moved to the lower-priority queue
+</ol>
+
+
+
+
+<p>
+      <br><br><b>Process Synchronization:</b></br></br>
+      Process synchronization is a crucial concept in concurrent computing, which deals with the coordination and communication between multiple processes or threads to ensure proper and orderly execution. It aims to prevent race conditions and data inconsistencies that can arise when multiple processes access shared resources concurrently.
+      <br><b>The Critical Section Problem:</b></br>
+      The critical section problem is a classic synchronization problem that arises in concurrent programming. It refers to a situation where multiple processes or threads share a common resource (e.g., shared memory, file, or I/O device), and each process has a section of code called the "critical section" that accesses and modifies the shared resource. The goal is to ensure that only one process can execute its critical section at a time while others wait, ensuring mutual exclusion and preventing conflicts.
+      <br><b>Synchronization Hardware:</b></br>
+      Synchronization hardware includes specialized processor instructions and memory barrier operations provided by modern CPUs to support process synchronization. These hardware mechanisms ensure that memory operations are executed in a particular order and are not reordered or optimized in ways that could lead to synchronization issues. Examples of synchronization hardware include atomic compare-and-swap (CAS) operations, memory barriers, and cache coherence protocols.
+      <br><b>Semaphores:</b></br>
+      Semaphores are synchronization primitives used to coordinate the access to shared resources among multiple processes or threads. They were introduced by Dutch computer scientist Edsger W. Dijkstra. A semaphore is essentially an integer variable that can be accessed atomically and supports two fundamental operations:
+      <br><b>Wait (P) operation:</b> Decreases the semaphore value. If the value becomes negative, the process is blocked, and its execution is suspended until the semaphore becomes non-negative.</br>
+      <br><b>Signal (V) operation:</b> Increases the semaphore value. If any processes were blocked on this semaphore, one of them is woken up and allowed to proceed.</br>
+      Semaphores can be used to implement various synchronization mechanisms, including mutual exclusion and coordination among processes.
+      <br><b>Monitors:</b></br>
+      Monitors are a higher-level synchronization construct that combines data (shared resource) and procedures (methods) to operate on that data in a single unit. Monitors encapsulate shared resources and enforce mutual exclusion by allowing only one process to enter the monitor at a time. If a process attempts to enter the monitor while another process is inside, it will be blocked until the monitor becomes available.
+      
+</p>
+
+
+
+<br>
+      <b>
+            <p>Classic problems of synchronization </p>
+      </b>
+</br>
+<ol>
+      are well-known challenges in concurrent programming that demonstrate the need for proper coordination and communication between multiple processes or threads. These problems highlight various synchronization issues like race conditions, deadlocks, and resource contention. Some of the classic problems of synchronization include:
+      <b><br>1. The Dining Philosophers Problem:</br></b>
+      In this problem, several philosophers sit around a table with a bowl of rice and a single chopstick placed between each pair of adjacent philosophers. The philosophers alternate between thinking and eating. To eat, a philosopher must pick up both chopsticks (left and right). The challenge is to design a solution to prevent deadlocks and ensure that all philosophers get a chance to eat without causing starvation.
+      <b><br>2. The Producer-Consumer Problem (Bounded-Buffer Problem):</br></b>
+      This problem involves two types of processes: producers, which generate data, and consumers, which consume the data. They share a common, fixed-size buffer. The issue is to synchronize the producers and consumers properly to avoid race conditions, buffer overflows, or underflows.
+      <b><br>3. The Readers-Writers Problem:</br></b>
+      The problem deals with multiple readers and writers accessing a shared resource, such as a database or a file. Multiple readers can access the resource simultaneously, but only one writer can access it exclusively. The challenge is to design a solution that allows concurrent reading while ensuring mutual exclusion between readers and writers.
+      <b><br>4. The Sleeping Barber Problem:</br></b>
+      In this scenario, a barber shop has one barber and several chairs for waiting customers. If there are no customers, the barber sleeps. When a customer arrives, they either wake the barber to get a haircut or, if all chairs are occupied, leave the shop. The problem is to coordinate the barber and the customers to avoid race conditions and prevent customers from leaving when the barber is available.
+      <b><br>5. The Cigarette Smokers Problem:</br></b>
+      This problem involves three smokers, each of whom has an infinite supply of one ingredient needed to make a cigarette: tobacco, paper, or matches. There is also a tobacco company agent responsible for supplying two random ingredients. The smokers must coordinate their actions to ensure that each can successfully make a cigarette without deadlocking or wasting ingredients.
+      <b><br>6. The Bridge Crossing Problem:</br></b>
+      This problem features a bridge that can only accommodate a limited number of vehicles at a time. Vehicles of different types (e.g., cars, trucks) need to cross the bridge in both directions. The challenge is to design a solution that allows the vehicles to cross the bridge safely and efficiently, avoiding collisions and deadlocks
+      
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+      </body>
+</html>
