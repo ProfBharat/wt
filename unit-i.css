@@ -1,5 +1,9 @@
 body{
-    padding: 30px;
+    padding-top: 30px;
+    padding-left: 200px;
+    padding-right:200px;
+    background-color: #111;
+    color:white;
 }
 ul {
     list-style-type: none;
@@ -30,6 +34,15 @@ h1{
 h2{
     text-align: center;
 }
+
+pre {
+    background-color: #333; /* Dark gray background */
+    padding: 10px;
+    border: 1px solid #222; /* Dark gray border */
+    overflow-x: auto;
+    white-space: pre-wrap;
+    color: #00ff00; /* Green text color */
+  }
 
 
 
