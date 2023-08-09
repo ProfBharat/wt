@@ -1,108 +1,430 @@
+
 <!DOCTYPE html>
 <html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>Working with Forms:</p>
+
+<p>Creating Forms:</p>
+
+<p>Definition: HTML forms are used to collect user input on a web page. The &ltform&gt tag is used to create a form, and form elements like &ltinput&gt, &ltselect&gt, and &lttextarea&gt are used to capture user data.</p>
+
+<p>Explanation: Forms allow users to enter information, make selections, and submit data to the server for processing.</p>
+
+<p>Example Program:</p>
+
+
+
+<textarea name="" id="" cols="100" rows="30">
+      <!DOCTYPE html>
+      <html>
       <head>
-            <meta charset="UTF-8" />
-            <meta
-                  name="viewport"
-                  content="width=device-width, initial-scale=1.0"
-            />
-            <link rel="stylesheet" href="index.css" />
-            <title>Operating System Notes</title>
+          <title>PHP Form</title>
       </head>
       <body>
-            <!-- Navigation Menu -->
-            <nav>
-                  <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="unit-i.html">Unit-I </a></li>
-                        <li><a href="unit-ii.html">Unit-II</a></li>
-                        <li><a href="unit-iii.html">Unit-III</a></li>
-                        <li><a href="unit-iv.html">Unit-IV</a></li>
-                        <li><a href="unit-v.html">Unit-V: Deadlocks</a></li>
-                  </ul>
-            </nav>
-
-            <h1>
-                  <br>Operating Systems</br>
-                  <br>Unit -IV Notes</br>
-                  <br>Instructor: Bharat Kumar</br>
-            </h1>
-
-<br>Syllabus: File System Interface - The Concept of a File, Access methods, Directory Structure, File System Mounting, File Sharing, Protection, File System Structure, Mass Storage Structure - Overview of Mass Storage Structure, Disk Structure, Disk Attachment, Disk Scheduling.</br>
-
-
-<br>Concept of a File:</br>
-In computing, a file is a named collection of related information stored on a storage medium, such as a hard disk, solid-state drive (SSD), or tape. Files can contain various types of data, such as text, images, videos, programs, or any other digital information. Files are organized into directories (folders) to provide a hierarchical structure for organizing and managing data.
-<br>Access Methods:</br>
-<br>Access methods determine how files are read from or written to in a file system. Different access methods include:</br>
-<br>Sequential Access: Files are accessed sequentially from the beginning to the end. Data is read or written in a linear fashion. This method is suitable for files where data is processed in a specific order, like reading a text file line by line.</br>
-<br>Direct Access: Files are accessed randomly, allowing direct access to any part of the file without the need to read data sequentially. Each part of the file has a unique address or offset, making it possible to read or write data at any location. This method is useful for large files where quick access to specific data is required, like a database file.</br>
-<br>Indexing: Files are accessed using an index or key. An index structure maintains a mapping between the index value and the location of the data in the file. This method enables efficient retrieval of data based on the index value. It is commonly used in database systems.</br>
-<br>Directory Structure:</br>
-A directory structure organizes files and directories in a hierarchical manner. It provides a way to group related files together and manage their organization. Common directory structures include:
-<br>Single-Level Directory: All files are placed in a single directory without any subdirectories. This structure is simple but lacks organization and scalability.</br>
-
-
-
-
-
-<br>Two-Level Directory: Files are organized into groups, and each group has its own subdirectory. Each file is uniquely identified by its name and the name of the group directory.</br>
-
-
-
-
-
-<br>Tree-Structured Directory: Files are organized in a tree-like structure with a root directory at the top. Each directory can contain files and subdirectories, forming a hierarchical organization.</br>
-
-<br>Acyclic-Graph Directory: Allows files to have multiple links or pointers to different directories. This structure allows for shared files among directories but prevents cycles from occurring.</br>
-	
-
-
-
-
-<br>File System Mounting:</br>
-File system mounting is the process of making a file system available for access. When a file system is mounted, the operating system associates it with a specific mount point (a directory) within the overall directory structure. Once mounted, the files and directories within that file system become accessible to users and applications.
-<br>File Sharing:</br>
-File sharing enables multiple users or processes to access and use the same file simultaneously. It allows collaboration and concurrent access to files. File systems employ various mechanisms, such as file locks, to ensure data consistency and prevent conflicts when multiple users attempt to modify the same file simultaneously.
-<br>Protection:</br>
-File system protection involves mechanisms to control and manage access to files. Access control lists (ACLs), permissions, and user/group-level privileges are commonly used to enforce file-level security and restrict unauthorized access. Protection mechanisms ensure that only authorized users can read, write, or execute files based on their permissions.
-<br>File System Structure:</br>
-File system structure refers to the organization and layout of files and directories within a file system. Different file systems use various structures to manage and store data on storage devices. Common file system structures include:
-<br>File Allocation Table (FAT): Used by the FAT file system, it maintains a table to track the allocation status of each file cluster on the disk.</br>
-<br>Indexed Allocation: Utilizes an index structure to store file addresses and pointers. The index maps each file to a set of disk block addresses.</br>
-<br>Unix File System (UFS): Organizes data into inodes (index nodes), which contain metadata about files and pointers to data blocks.</br>
-<br>New Technology File System (NTFS): Uses a master file table (MFT) to store file metadata, such as file attributes, permissions, and data extents.</br>
-
-
-
-
-
-
-<br>Overview of Mass Storage Structure:</br>
-Mass storage refers to the storage of large amounts of data in a non-volatile manner. It serves as a repository for files, databases, operating systems, and other types of data that need to be preserved even when the power is turned off. Mass storage devices typically have higher capacity and are slower than primary storage (RAM). Some common types of mass storage devices include hard disk drives (HDDs), solid-state drives (SSDs), optical drives (CD/DVD), and magnetic tapes.
-<br>Disk Structure:</br>
-Both hard disk drives (HDDs) and solid-state drives (SSDs) have a similar logical structure. The storage is divided into fixed-size units called sectors, and a group of sectors forms a block or cluster. Each sector typically stores a fixed number of bytes of data (512 bytes being the common size). The operating system uses a file system to manage these sectors and clusters, organizing data into files and directories.
-<br>Disk Attachment:</br>
-Disks can be attached to a computer system using various interfaces, depending on the type of disk and the capabilities of the system. Common disk attachment interfaces include:
-<br>SATA (Serial ATA): Commonly used for internal hard drives and SSDs in modern computers.</br>
-<br>SAS (Serial Attached SCSI): Used for high-performance enterprise-level storage.</br>
-<br>PCIe (Peripheral Component Interconnect Express): Used for high-speed, direct-attached storage devices like NVMe SSDs.</br>
-<br>USB (Universal Serial Bus): Used for connecting external storage devices like USB flash drives and external hard drives.</br>
-<br>Thunderbolt: A high-speed interface used for connecting external storage devices and peripherals to Apple computers.</br>
-
-
-
-
-<br>Disk Scheduling:</br>
-Disk scheduling is a technique used by the operating system to optimize the access and retrieval of data from disk storage. Disk access times consist of seek time (moving the read/write head to the desired track), rotational delay (waiting for the desired sector to rotate under the head), and transfer time (reading or writing the data). Efficient disk scheduling algorithms aim to minimize the seek time and rotational delay to improve overall disk I/O performance.
-Some commonly used disk scheduling algorithms include:</br>
-<br>First-Come, First-Served (FCFS): Requests are serviced in the order they arrive. It is simple but can lead to poor performance due to the "elevator effect," where the head moves back and forth across the disk.</br>
-<br>Shortest Seek Time First (SSTF): Selects the request with the shortest seek time from the current head position. It reduces seek time but may cause starvation for some requests.</br>
-<br>SCAN (Elevator) Algorithm: The head moves from one end of the disk to the other, servicing requests along the way. Once it reaches the other end, it reverses direction. This reduces the "elevator effect" but can lead to delayed servicing of some requests.</br>
-<br>C-SCAN (Circular SCAN) Algorithm: Similar to SCAN, but the head jumps back to the other end of the disk after reaching one end, without servicing requests. This avoids the delayed servicing problem of SCAN.</br>
-<br>LOOK Algorithm: Similar to SCAN but changes direction when there are no more requests in the current direction. It prevents the head from going to the end of the disk unnecessarily.</br>
-<br>C-LOOK Algorithm: Similar to C-SCAN but changes direction when there are no more requests in the current direction. It avoids unnecessary head movement of the C-SCAN algorithm.</br>
-
-
+          <form action="process_form.php" method="post">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required><br>
+      
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required><br>
+      
+              <input type="submit" value="Submit">
+          </form>
       </body>
+      </html>
+</textarea>
+
+<br>
+<p>
+      <hr>
+</p>
+<br>
+
+<p>Accessing Form Input with User Defined Arrays:</p>
+
+<p>Definition: When a form is submitted, the data is sent to the server, where it can be accessed using PHP. PHP provides two superglobal arrays, $_GET and $_POST, to access form data based on the form's method attribute (GET or POST).</p>
+
+<p>Explanation: Using these superglobal arrays, we can access the form input values and use them in PHP code.</p>
+
+<p>Example Program (process_form.php):</p>
+
+
+<textarea name="" id="" cols="100" rows="30">
+      <!DOCTYPE html>
+      <html>
+      <head>
+          <title>Form Data Processing</title>
+      </head>
+      <body>
+          <?php
+          if ($_SERVER["REQUEST_METHOD"] == "POST") {
+              $name = $_POST["name"];
+              $email = $_POST["email"];
+      
+              echo "<p>Thank you, $name, for submitting your email: $email</p>";
+          }
+          ?>
+      </body>
+      </html>
+</textarea>
+
+<br>
+<hr>
+<br>
+
+<p>Combining HTML and PHP Code on a Single Page:</p>
+
+<p>Explanation: PHP code can be embedded directly within HTML code using PHP opening and closing tags (<?php ?>). This allows us to dynamically generate content based on PHP variables and logic.</p>
+
+<p>Example Program:</p>
+
+
+<textarea name="" id="" cols="80" rows="20">
+      <!DOCTYPE html>
+      <html>
+      <head>
+          <title>Dynamic Content</title>
+      </head>
+      <body>
+          <?php
+          $name = "John";
+          $age = 30;
+          ?>
+      
+          <h1>Welcome, <?php echo $name; ?></h1>
+          <p>You are <?php echo $age; ?> years old.</p>
+      </body>
+      </html>
+</textarea>
+
+<br>
+<hr>
+<br>
+
+<p>Redirecting the User:</p>
+
+<p>Definition: PHP provides the header() function to redirect users to a different web page. The header() function sends an HTTP header to the browser, instructing it to redirect to the specified URL.</p>
+
+<p>Explanation: Redirects are useful when we want to send users to a different page after processing a form or performing certain actions.</p>
+
+<p>Example Program (redirect.php):</p>
+
+
+<textarea name="" id="" cols="50" rows="7">
+      <?php
+      header("Location: new_page.php");
+      exit;
+      ?>
+</textarea>
+
+
+
+      <p>Sending Mail on Form Submission:</p>
+
+
+<p>Definition: PHP's mail() function allows you to send email messages from a web server. You can use this function to notify yourself or the user about form submissions or other events.</p>
+
+<p>Explanation: To use the mail() function, the web server must be properly configured to send emails.</p>
+
+<p>Example Program (send_email.php):</p>
+
+
+<textarea name="" id="" cols="70" rows="10">
+      <?php
+      if ($_SERVER["REQUEST_METHOD"] == "POST") {
+          $to = "youremail@example.com";
+          $subject = "New Form Submission";
+          $message = "Name: " . $_POST["name"] . "\n";
+          $message .= "Email: " . $_POST["email"] . "\n";
+      
+          mail($to, $subject, $message);
+      }
+      ?>
+<p></textarea></p>
+
+
+<p>Working with File Uploads:</p>
+
+<p>Definition: HTML forms can include file input fields (&lt input type="file" &gt) to allow users to upload files to the server. PHP provides $_FILES to access uploaded file data.</p>
+
+<p>Explanation: When a file is uploaded, PHP stores the file in a temporary location, and we can move it to a desired location on the server.</p>
+
+<p>Example Program (upload_file.php):</p>
+
+
+<textarea name="" id="" cols="100" rows="40">
+      <!DOCTYPE html>
+      <html>
+      <head>
+          <title>File Upload</title>
+      </head>
+      <body>
+          <form action="upload_file.php" method="post" enctype="multipart/form-data">
+              <input type="file" name="file">
+              <input type="submit" value="Upload">
+          </form>
+      
+          <?php
+          if ($_SERVER["REQUEST_METHOD"] == "POST") {
+              $targetDir = "uploads/";
+              $targetFile = $targetDir . basename($_FILES["file"]["name"]);
+      
+              if (move_uploaded_file($_FILES["file"]["tmp_name"], $targetFile)) {
+                  echo "File uploaded successfully.";
+              } else {
+                  echo "Error uploading file.";
+              }
+          }
+          ?>
+      </body>
+      </html>
+
+</textarea>
+
+<br>
+<hr>
+<br>
+
+
+<p></p>
+<p>Working with Cookies and User Sessions:</p>
+
+<p>Introducing Cookies:</p>
+
+<p>Definition: Cookies are small pieces of data stored on the user's device by the web browser. They are used to remember user preferences, login sessions, and other information.</p>
+
+<p>Explanation: Cookies are useful for maintaining state and personalizing user experiences.</p>
+
+<p>Example Program (set_cookie.php):</p>
+
+
+<textarea name="" id="" cols="70" rows="10">
+      <?php
+      $expiry = time() + (86400 * 30); // Set cookie to expire in 30 days
+      setcookie("username", "john_doe", $expiry);
+      ?>
+</textarea>
+
+<p>Setting a Cookie with PHP:</p>
+
+<p>Definition: PHP's setcookie() function is used to set cookies on the user's device. Cookies can be used to store small amounts of data that will be sent back to the server with each subsequent request from the same client.</p>
+
+<p>Explanation: Setting cookies allows the server to remember information about the user for a certain period of time.</p>
+
+<p>Example Program (set_cookie.php):</p>
+
+
+<textarea name="" id="" cols="80" rows="10">
+      <?php
+      $expiry = time() + (86400 * 30); // Set cookie to expire in 30 days
+      setcookie("username", "john_doe", $expiry);
+      ?>
+</textarea>
+
+
+<p>Session Function Overview:</p>
+
+<p>Definition: PHP provides session management functions to work with user sessions. Sessions allow you to store user-specific data on the server that persists between page requests.</p>
+
+<p>Explanation:Sessions are useful for maintaining user state and managing user authentication.</p>
+
+<p>Example Program (start_session.php):</p>
+
+
+
+<textarea name="" id="" cols="60" rows="10">
+      <?php
+      session_start();
+      $_SESSION["username"] = "john_doe";
+      ?>
+</textarea>
+
+
+<p>Starting a Session:</p>
+
+<p>Definition: To start a session, you need to call the session_start() function at the beginning of the PHP script. This function creates a unique session ID for the user and enables session data storage.</p>
+
+<p>Explanation: Starting a session allows you to store and retrieve data specific to each user.</p>
+
+<p>Example Program (start_session.php):</p>
+
+
+<textarea name="" id="" cols="50" rows="10">
+      
+            <?php
+            session_start();
+            $_SESSION["username"] = "john_doe";
+            ?>
+      
+      
+</textarea>
+
+
+
+
+<p></p>
+<p>Working with Session Variables:</p>
+
+<p>Definition: Session variables are used to store data that is accessible across different pages during the user's session. Session variables are stored on the server.</p>
+
+<p>Explanation: Session variables allow you to persist user-specific data throughout a browsing session.</p>
+
+<p>Example Program (session_variables.php):</p>
+
+
+
+<textarea name="" id="" cols="50" rows="10">
+      <?php
+      session_start();
+      $_SESSION["username"] = "john_doe";
+      
+      echo "Welcome, " . $_SESSION["username"];
+      ?>
+</textarea>
+
+<p>
+      
+      
+      Passing Session IDs in the Query String:
+
+<p>Definition: When using URL rewriting or in scenarios where cookies are disabled, you can pass the session ID in the URL query string to maintain the session across pages.</p>
+
+<p>Explanation: Passing the session ID in the URL allows the server to associate subsequent requests with the correct session data.</p>
+
+<p>Example Program (page1.php):</p>
+
+
+<textarea name="" id="" cols="90" rows="20">
+      <?php
+      session_start();
+      $_SESSION["username"] = "john_doe";
+      ?>
+      
+      <!DOCTYPE html>
+      <html>
+      <head>
+          <title>Page 1</title>
+      </head>
+      <body>
+          <h1>Welcome, <?php echo $_SESSION["username"]; ?></h1>
+          <a href="page2.php?<?php echo session_name() . '=' . session_id(); ?>">Go to Page 2</a>
+      </body>
+      </html>
+</textarea>
+
+
+
+<p>Example Program (page2.php):</p>
+
+
+<textarea name="" id="" cols="30" rows="10">
+      <?php
+      session_id($_GET[session_name()]);
+      session_start();
+      ?>
+</textarea>
+
+
+
+<textarea name="" id="" cols="60" rows="10">
+      <!DOCTYPE html>
+      <html>
+      <head>
+          <title>Page 2</title>
+      </head>
+      <body>
+          <h1>Welcome to Page 2, <?php echo $_SESSION["username"]; ?></h1>
+      </body>
+      </html>
+</textarea>
+
+
+
+
+<p>Destroying Sessions and Unsetting Variables:</p>
+
+<p>Definition: PHP provides the session_destroy() function to end a session and remove all session data. To unset a specific session variable, you can use the unset() function.</p>
+
+<p>Explanation: Destroying sessions and unsetting variables are essential for logging users out or removing specific session data.</p>
+
+<p>Example Program (logout.php):</p>
+
+
+<textarea name="" id="" cols="50" rows="10">
+      <?php
+      session_start();
+      session_destroy();
+      header("Location: login.php");
+      exit;
+      ?>
+</textarea>
+
+<p></p>
+<p>Using Sessions in an Environment with Registered Users:</p>
+
+<p>Explanation: In a web application with registered users, you can use sessions to manage user authentication and access control. Once a user logs in, you can store their user ID or other relevant information in the session to identify them on subsequent page requests.</p>
+
+<p>Example Program (login.php):</p>
+
+
+<textarea name="" id="" cols="60" rows="50">
+      <?php
+      session_start();
+      
+      if ($_SERVER["REQUEST_METHOD"] == "POST") {
+          // Check user credentials and log them in
+          // If login successful, store user ID in session
+          $_SESSION["user_id"] = $user_id;
+          header("Location: dashboard.php");
+          exit;
+      }
+      ?>
+</textarea>
+
+
+<p>Example Program (dashboard.php):</p>
+
+
+<textarea name="" id="" cols="60" rows="13">
+      <?php
+      session_start();
+      
+      // Check if the user is logged in
+      if (!isset($_SESSION["user_id"])) {
+          header("Location: login.php");
+          exit;
+      }
+      
+      // Display dashboard content for logged-in user
+      ?>
+</textarea>
+
+
+
+
+
+
+
+
+</body>
 </html>
