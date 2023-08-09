@@ -13,6 +13,8 @@
               href="https://fonts.googleapis.com/icon?family=Material+Icons"
         />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+        
         <title>Web Design Notes</title>
   </head>
 
@@ -54,18 +56,87 @@
 
 Example Program:1
 
-<pre class="program-1">
-    &lt!DOCTYPE html&gt
-    &lthtml&gt
-    &lthead&gt
-        &lttitle&gtMy First Web Page&lt/title&gt
-    &lt/head&gt
-    &ltbody&gt
-        &lth1&gtHello, World!&lt/h1&gt
-        &ltp&gtThis is my first web page created with HTML.&lt/p&gt
-    &lt/body&gt
-    &lt/html&gt
-</pre>
+<div id="container">
+    <div id="code-container">
+        <pre class="program-1">
+            &lt!DOCTYPE html&gt
+            &lthtml&gt
+            &lthead&gt
+                &lttitle&gtMy First Web Page&lt/title&gt
+            &lt/head&gt
+            &ltbody&gt
+                &lth1&gtHello, World!&lt/h1&gt
+                &ltp&gtThis is my first web page created with HTML.&lt/p&gt
+            &lt/body&gt
+            &lt/html&gt
+        </pre>
+    </div>
+    
+    <div id="output-container">
+    
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>My First Web Page</title>
+        </head>
+        <body>
+            <h1>Hello, World!</h1>
+            <p>This is my first web page created with HTML.</p>
+        </body>
+        </html>
+    
+    
+    </div>
+</div>
+
+<br>
+<br>
+<hr>
+
+
+<h1>Code Editor with Output</h1>
+
+<div id="container-editor">
+
+    <textarea id="code-editor">
+        <h1>hi</h1>
+    </textarea>
+
+    <div id="output-editor">
+        <h2 >Output</h2>
+        <div id="output"></div>
+    </div>
+
+</div>
+
+<button onclick="runCode()">Run Code</button>
+
+
+
+<!-- <script > 
+    function runCode() {
+        const code = document.getElementById('code-editor').value;
+        const outputDiv = document.getElementById('output');
+        
+        try {
+            outputDiv.innerHTML = ''; // Clear previous output
+            const iframe = document.createElement('iframe');
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            iframe.style.border = 'none';
+            outputDiv.appendChild(iframe);
+            
+            const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+            iframeDoc.open();
+            iframeDoc.write(code);
+            iframeDoc.close();
+        } catch (error) {
+            outputDiv.innerHTML = '<p style="color: red;">Error: ' + error.message + '</p>';
+        }
+    }
+    
+    </script> -->
+
 
 <p>
     Basic HTML: Definition: The basic HTML structure consists of the &lt!DOCTYPE
@@ -123,11 +194,17 @@ Hyperlinks:
 Example Program: 3
 
 
-<pre>
+<pre>&lt!DOCTYPE html&gt
+    &lthtml&gt
+    &lthead&gt
+        &lttitle&gtMy First Web Page&lt/title&gt
+    &lt/head&gt
+
     &ltbody&gt
         &lth1&gtWelcome to My Website&lt/h1&gt
         &ltp&gtVisit our &lta href="https://www.profbharat.in"&gt My Website&lt/a&gt for more information.&lt/p&gt
     &lt/body&gt
+    &lt/html&gt
 </pre>
 Adding More Formatting:
 
@@ -135,16 +212,23 @@ Adding More Formatting:
 
 <p>Explanation: These tags help in adding emphasis, marking changes, and displaying special text elements.</p>
 
-Example Program:
+Example Program:4
 
 
 <pre>
+    &lt!DOCTYPE html&gt
+    &lthtml&gt
+    &lthead&gt
+        &lttitle&gtMy First Web Page&lt/title&gt
+    &lt/head&gt
+
     &ltbody&gt
         &lth1&gtWelcome to My Website&lt/h1&gt
         &ltp&gtThis is a &ltmark&gthighlighted&lt/mark&gt text.&lt/p&gt
         &ltp&gtThis is a &ltdel&gtdeleted&lt/del&gt text and &ltins&gtinserted&lt/ins&gt text.&lt/p&gt
         &ltp&gtThis is a &ltsub&gtsubscript&lt/sub&gt and &ltsup&gtsuperscript&lt/sup&gt text.&lt/p&gt
     &lt/body&gt
+    &lt/html&gt
 </pre>
 <p>Lists:</p>
 
@@ -152,10 +236,15 @@ Example Program:
 
 <p>Explanation: Lists help organize content into bullet points or numbered items for better readability and presentation.</p>
 
-Example Program:
+Example Program:5
 
 
-<pre>
+<pre>&lt!DOCTYPE html&gt
+    &lthtml&gt
+    &lthead&gt
+        &lttitle&gtMy First Web Page&lt/title&gt
+    &lt/head&gt
+
     &ltbody&gt
         &lth2&gtUnordered List&lt/h2&gt
         &ltul&gt
@@ -171,6 +260,7 @@ Example Program:
             &ltli&gtThird&lt/li&gt
         &lt/ol&gt
     &lt/body&gt
+    &lt/html&gt
 </pre>
 Tables:
 
@@ -178,28 +268,36 @@ Tables:
 
 <p>Explanation: Tables are useful for organizing data into rows and columns, making it easier to compare and analyze information.</p>
 
-Example Program:
+Example Program:6
 
 html
 Copy code
-<pre>
-    &ltbody&gt
-        &lttable&gt
-            &lttr&gt
-                &ltth&gtName&lt/th&gt
-                &ltth&gtAge&lt/th&gt
-            &lt/tr&gt
-            &lttr&gt
-                &lttd&gtJohn&lt/td&gt
-                &lttd&gt30&lt/td&gt
-            &lt/tr&gt
-            &lttr&gt
-                &lttd&gtJane&lt/td&gt
-                &lttd&gt25&lt/td&gt
-            &lt/tr&gt
-        &lt/table&gt
-    &lt/body&gt
-</pre>
+<div>
+    <pre>&lt!DOCTYPE html&gt
+        &lthtml&gt
+        &lthead&gt
+            &lttitle&gtMy First Web Page&lt/title&gt
+        &lt/head&gt
+    
+        &ltbody&gt
+            &lttable&gt
+                &lttr&gt
+                    &ltth&gtName&lt/th&gt
+                    &ltth&gtAge&lt/th&gt
+                &lt/tr&gt
+                &lttr&gt
+                    &lttd&gtJohn&lt/td&gt
+                    &lttd&gt30&lt/td&gt
+                &lt/tr&gt
+                &lttr&gt
+                    &lttd&gtJane&lt/td&gt
+                    &lttd&gt25&lt/td&gt
+                &lt/tr&gt
+            &lt/table&gt
+        &lt/body&gt
+        &lt/html&gt
+    </pre>
+</div>
 
 
 
@@ -209,14 +307,21 @@ Images:
 
 <p>Explanation: Images enhance the visual appeal of a web page and provide additional context to the content.</p>
 
-Example Program:
+Example Program:7
 
 
 <pre>
+    &lt!DOCTYPE html&gt
+    &lthtml&gt
+    &lthead&gt
+        &lttitle&gtMy First Web Page&lt/title&gt
+    &lt/head&gt
     &ltbody&gt
         &lth2&gtImage Example&lt/h2&gt
         &ltimg src="image.jpg" alt="Sample Image"&gt
     &lt/body&gt
+
+    &lt/html&gt
 </pre>
 <br>
 Multimedia Objects:
@@ -225,10 +330,16 @@ Multimedia Objects:
 
 <p>Explanation: Multimedia elements allow web pages to include videos and audio files, making the content more engaging and interactive.</p>
 
-Example Program:
+Example Program:8
 
 
 <pre>
+    &lt!DOCTYPE html&gt
+    &lthtml&gt
+    &lthead&gt
+        &lttitle&gtMy First Web Page&lt/title&gt
+    &lt/head&gt
+
     &ltbody&gt
         &lth2&gtVideo Example&lt/h2&gt
         &ltvideo controls&gt
@@ -242,6 +353,8 @@ Example Program:
             Your browser does not support the audio tag.
         &lt/audio&gt
     &lt/body&gt
+
+    &lt/html&gt
 </pre>
 Frames:
 
@@ -249,15 +362,23 @@ Frames:
 
 <p>Explanation: Frames allow web developers to split a page into separate sections, each with its own content. However, frames are no longer recommended in modern web development due to their limitations and impact on usability and accessibility.</p>
 
-Example Program:
+Example Program:9
 
 
 <pre>
+    &lt!DOCTYPE html&gt
+    &lthtml&gt
+    &lthead&gt
+        &lttitle&gtMy First Web Page&lt/title&gt
+    &lt/head&gt
+
     &ltbody&gt
         &lth2&gtFrames Example&lt/h2&gt
         &ltframe src="frame1.html" name="frame1"&gt
         &ltframe src="frame2.html" name="frame2"&gt
     &lt/body&gt
+
+    &lt/html&gt
 </pre>
 Forms:
 
@@ -265,10 +386,16 @@ Forms:
 
 <p>Explanation: Forms enable users to enter and submit data to web servers. They are widely used for various purposes, such as user registration, login, search, and more.</p>
 
-Example Program:
+Example Program: 10
 
 
 <pre>
+    &lt!DOCTYPE html&gt
+    &lthtml&gt
+    &lthead&gt
+        &lttitle&gtMy First Web Page&lt/title&gt
+    &lt/head&gt
+
     &ltbody&gt
         &lth2&gtForm Example&lt/h2&gt
         &ltform action="submit.php" method="post"&gt
@@ -279,8 +406,15 @@ Example Program:
             &ltinput type="submit" value="Submit"&gt
         &lt/form&gt
     &lt/body&gt
+
+    &lt/html&gt
 </pre>
 
 
+
+
+
+
+<script src="./runcode.js"></script>
 </body>
 </html>

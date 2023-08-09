@@ -22,177 +22,667 @@
                   </ul>
             </nav>
 
-            <h1>Operating Systems <br>Unit -II notes </br> Instructor: Bharat Kumar </h1>
-
-            <br><br><b>Syllabus: </b>Process and CPU Scheduling - Process concepts - The Process, Process State, Process Control Block, Threads, Process Scheduling - Scheduling Queues, Schedulers, Context Switch, Preemptive Scheduling, Dispatcher, Scheduling Criteria, Scheduling algorithms, Case studies: Linux, Windows.</br></br>
-Process Coordination - Process Synchronization, The Critical section Problem, Synchronization Hardware, Semaphores, and Classic Problems of Synchronization, Monitors, Case Studies: Windows.
-
-
-
-<p>
-      <br><b>Process:</b></br>
-      In computing, a process refers to a running instance of a computer program. It is an independent, isolated unit that consists of its own memory space, code, data, and system resources. Each process executes a specific task or job and operates in its own virtual environment, isolated from other processes. Processes allow the operating system to manage multiple tasks concurrently.
-      <br>2. Process State:</br>
-</p>
-<p>A process can be in one of several states during its lifecycle, and the state represents the current condition of the process. The typical process states are:</p>
-
-
-
-<ol>
-      <br><b>Running:</b> The process is currently being executed by the CPU.</br>
-      <br><b>Ready:</b> The process is prepared to be executed but is waiting for the CPU to become available.</br>
-      <br><b>Blocked</b> (or Waiting): The process is waiting for a certain event (e.g., user input, I/O completion) to occur before it can continue its execution.</br>
-      <br><b>Terminated (or Exit):</b> The process has completed its execution and has been terminated. After termination, its resources are released, and it no longer exists in the system.</br>
-      Processes can transition between these states based on various events, such as I/O requests, timer interrupts, or the scheduler's decisions.
-</ol>
-
-
-<p>
-      <br>3. <b>Process Control Block (PCB):</b></br>
-      A Process Control Block (PCB) is a data structure used by the operating system to store and manage information about a specific process. Each process in the system has its PCB, which includes various pieces of information, such as:
-</p>
-
-<ol>
-      <br><b>Process ID (PID):</b> A unique identifier assigned to each process.</br>
-      <br><br><b>Process state:</b> The current state of the process (e.g., running, ready, blocked).</br></br>
-      <br><b>Program Counter (PC):</b> The address of the next instruction to be executed.</br>
-      <br><b>CPU Registers:</b> The contents of the processor's registers at the time of interruption.</br>
-      <br><b>Memory Management Information:</b> Details about the process's memory allocation.</br>
-      <br><b>I/O Information: The process's I/O devices and their status.</b></br>
-      <br><b>Accounting Information:</b> Resource usage statistics, like CPU time consumed.</br>
-      The PCB allows the operating system to save and restore the state of a process efficiently during context switches or when a process is interrupted and later resumed.
-</ol>
-
-
-<p>
-      <br>4. Threads:</br>
-      Threads are the smallest units of a process, and they represent individual execution paths within the process. Unlike separate processes, threads within the same process share the same memory space and system resources, making communication between threads more efficient than between processes. Threads can execute concurrently, allowing for better utilization of multi-core processors and improved performance.
-      Threads within a process share the same code and data, including file descriptors, while having their own registers and a separate thread ID (TID). Threads can run concurrently, and the operating system schedules them for execution on available CPU cores. Multithreading allows for parallel execution of different parts of a program, enhancing responsiveness and scalability.
-</p>
-
+            
+            <h1>
+                  Unit II Web Design
+                  instructor : Bharat Kumar
+            </h1>
  <p>
-       <br>Scheduling Queues:</br>
-       Scheduling queues are data structures used by the operating system to organize processes or threads based on their current state. The typical scheduling queues are:
+       Building blocks of PHP:
+       Variables, Data Types, Operators and Expressions, Constants. Flow Control Functions in
+       PHP: Switching Flow, Loops, Code Blocks and Browser Output. Working with Functions:
+       Defining Functions, Calling functions, returning the values from User Defined Functions,
+       Variable Scope, Saving State between Function calls with the Static statement, more about arguments..
  </p>
 
- <ol>
-       <br>Job Queue: Contains all processes in the system, including those waiting to be admitted.</br>
-       <br>Ready Queue: Holds processes that are ready to execute but are waiting for CPU time.</br>
-       <br>Blocked Queue (or Waiting Queue): Keeps processes that are waiting for a certain event (e.g., I/O completion) before they can proceed.</br>
-       <br>Suspended Queue: Holds processes that are temporarily suspended, often due to some user or system action.</br>
-       <br>Terminated Queue: Contains processes that have finished their execution and are waiting to be removed from the system.</br>
-       <br>Processes move between these queues based on their state changes, and the scheduler is responsible for deciding which process gets CPU time from the ready queue.</br>
- </ol>
+
 
 <p>
-      <br>2. Schedulers:</br>
-      <br><br>Schedulers are components of the operating system responsible for deciding which process or thread should run next on the CPU. The main types of schedulers are:</br></br>
-      <br>Long-Term Scheduler (Job Scheduler): This scheduler selects processes from the job queue and admits them to the system. It determines which processes will be loaded into memory for execution. The long-term scheduler is less frequent but crucial for overall system performance.</br>
-      <br>Short-Term Scheduler (CPU Scheduler): The short-term scheduler selects processes from the ready queue and allocates CPU time to them. It determines which process will execute on the CPU for a short period (time slice or quantum) before being interrupted and replaced by another process.</br>
-      <br>Medium-Term Scheduler: Not all operating systems have this scheduler. It deals with the processes that are suspended or swapped out to secondary memory (e.g., disk) and decides when to bring them back into memory or terminate them.</br>
+      Install php using xampp.
+      configure it vscode.
+      for mac os,apache server is not mandatory, use command as brew install php
+      output: http://localhost/ex.php (we can open in some web browser)
+      ex.php is the file name.
+</p>
+
+<p>Variable : A variable in Php is a container which stores the value like strings, numbers, boolean etc. Every variable is preceded by $ symbol. Variable should start with letter or underscore. following are the valid declarations of variables.</p>
+
+<p>
+      <pre>
+            $name
+            $_name
+            $_85name
+            $_name85
+      </pre>
 </p>
 
 
-<p>
-      <br><b>3. Context Switch:</b></br>
-      A context switch is the process of saving the current state (context) of a running process or thread and loading the state of another process or thread so that it can continue execution. Context switches occur when the operating system switches the CPU from one process to another, which happens during process scheduling. Context switches add overhead to the system but are necessary for multitasking and time-sharing environments.
-</p>
+<p>Data types in php:</p>
+
+<table>
+      <tr>
+            <th>Data type
+            </th>
+            <th>Description</th>
+            <th>example</th>
+      </tr>
+      <tr>
+            <td>boolean</td>
+            <td>True or False</td>
+            <td>isfull=true</td>
+      </tr>
+      <tr>
+            <td>Integer</td>
+            <td>A whole number</td>
+            <td>rank= 12</td>
+      </tr>
+      <tr>
+            <td>Float</td>
+            <td>Floating Point Numbers</td>
+            <td>marks = 65.45</td>
+      </tr>
+      <tr>
+            <td>String</td>
+            <td>Collection of characters</td>
+            <td>name = "bharat" </td>
+      </tr>
+      <tr>
+            <td>Array</td>
+            <td>Ordered set of keys and values</td>
+            
+      </tr>
+
+      <tr>
+            <td>object</td>
+            <td>instance of class</td>
+            
+      </tr>
+      <tr>
+            <td>NULL</td>
+            <td>Uninitialized variable</td>
+            
+      </tr>
 
 
-<p>
-      <br><b>4. Preemptive Scheduling:</b></br>
-      Preemptive scheduling is a type of scheduling in which the operating system can interrupt a running process and force it to give up the CPU so that another process can run. The OS can make this decision based on priority levels or time quantum. Preemptive scheduling ensures fairer CPU allocation, responsiveness, and the ability to prioritize critical processes. It is commonly used in modern multitasking operating systems.
+</table>
+
+
+
+
+
+
+Operators
+
+Type
+ Operators
+Arithmetic
+ +,  -  ,   * ,  / , %
+Relational
+ < , > , == ,!=,   , <=, >= , ===,!==
+Logical
+|| ,or, xor,&&, and , !
+
+
+
+<p>Constants: For variables we can change the value of the variable anytime when we needed. if you do not want to change that value , we can define that value as constant using define() built in function.</p>
+
+define("rank", "4");
+
+The value of rank is contant now. we can only  change rank value, by defining it again.
+
+<pre>
+      &lt?php
+        define("rank","4");
+        echo "You rank is :".rank;
+      ?&gt
+</pre>
+
+
+
+Note: dot . is the concatenation operator
+
+
+.
+Functions
+
+<pre>
+      syntax :   function function_name($argument1, $argument2)
+                  {
+      //function code
+      }
+</pre>
+
+
+
+
+<pre>
+      Example : 	&lt?php
+      function sayhi()
+      {
+                  echo "&lth1&gt Hi Bharat &lth1&gt";
+      }
+      sayhi();
+      ?&gt
+</pre>
+
+
+<pre>
+      &lt!-- Php code to print your name --&gt
       
-<b></p></b>
-
-<p>
-      <br><b>5. Dispatcher:</b></br>
-      The dispatcher is a component of the operating system that performs the context switch during the scheduling process. When the scheduler selects a new process to run, the dispatcher is responsible for saving the current process's context, loading the context of the selected process, and starting its execution on the CPU.
-</p>
-
-<p>
-      <br><b>6. Scheduling Criteria:</b></br>
-      Schedulers use various criteria to determine the order in which processes are executed. Common scheduling criteria include:
-      <br><b>CPU Burst Time:</b> The amount of time a process needs to execute before it can be preempted or blocked.</br>
-      <br><b>Priority:</b> Each process may be assigned a priority, and the scheduler can use these priorities to determine which process gets CPU time first.</br>
-      <br><b>Deadline: </b>Some real-time systems have strict deadlines for certain processes, and the scheduler must ensure these deadlines are met.</br>
-      <br><b>Waiting Time:</b> The amount of time a process has spent waiting in the ready queue. Processes with longer waiting times may be given preference (e.g., to avoid starvation).</br>
-      <br><b>Turnaround Time: </b>The time taken from process arrival to its completion. Minimizing turnaround time can be a scheduling goal.</br>
-</p>
-<ol>
-      <br><br><b><b>1. First-Come-First-Serve (FCFS):</b></b></br></br>
-      In FCFS scheduling, processes are executed in the order they arrive in the ready queue. The process that arrives first gets the CPU first. It is a non-preemptive algorithm, meaning a process will run until it completes its execution or voluntarily releases the CPU.
-      Example:
-      Consider three processes arriving in the order P1, P2, and P3, with burst times 6, 4, and 8, respectively. The scheduling order would be: P1 -> P2 -> P3.
-      <br><b>2. Shortest Job Next (SJN) / Shortest Job First (SJF):</b></br>
-      SJN is a non-preemptive scheduling algorithm that selects the process with the shortest burst time from the ready queue. It optimizes for minimizing average waiting time.
-      Example:
-      Suppose we have three processes with burst times: P1 (3 units), P2 (1 unit), and P3 (4 units). The scheduling order would be: P2 -> P1 -> P3.
-      <br><b>3. Round Robin (RR):</b></br>
-      Round Robin is a preemptive scheduling algorithm that allocates a fixed time slice (quantum) to each process in the ready queue. If a process doesn't complete within its time slice, it is moved to the back of the queue, allowing other processes to run.
-      Example:
-      Assume three processes with burst times: P1 (8 units), P2 (4 units), and P3 (6 units). Using a time slice of 2 units, the scheduling order might be: P1 -> P2 -> P3 -> P1 -> P3 -> P1 -> P3, and so on.
-      <br><b>4. Priority Scheduling:</b></br>
-      Priority scheduling assigns a priority value to each process. The process with the highest priority gets the CPU first. It can be preemptive or non-preemptive.
-      Example:
-      Consider three processes with priorities: P1 (Priority 3), P2 (Priority 1), and P3 (Priority 2). The scheduling order could be: P2 -> P3 -> P1.
-      <br><b>5. Priority Preemptive Scheduling:</b></br>
-      This is similar to priority scheduling, but it is preemptive. If a higher-priority process arrives or becomes ready, it preempts the currently running process.
-      Example:
-      Three processes with priorities: P1 (Priority 2), P2 (Priority 1), and P3 (Priority 3). If P3 arrives while P2 is running, the scheduling order might change to: P3 -> P2 -> P1.
-      <br><b>6. Multilevel Queue Scheduling:</b></br>
-      In this algorithm, processes are divided into different queues, and each queue may have its scheduling algorithm and priorities. Processes move between the queues based on their characteristics or priorities.
-      Example:
-      Consider two queues: High priority (Priority-based scheduling) and Low priority (FCFS). High-priority processes get executed first, and low-priority processes are scheduled once the high-priority queue is empty.
-      <br><b>7. Multilevel Feedback Queue Scheduling:</b></br>
-      Similar to multilevel queue scheduling, but with the ability for processes to move between queues based on their behavior. For instance, long-running processes might get demoted to a lower-priority queue to provide fair CPU time to other processes.
-      Example:
-      Processes start in the highest priority queue. If a process doesn't complete its burst within the time slice, it gets moved to the lower-priority queue
-</ol>
+      :
+      &lt?php
+        function printname($name)
+        {
+         echo $name."&ltbr&gt";
+        }
+        printname("Bharat");
+        printname("Kumar");
+      ?&gt
+</pre>
 
 
-
-
-<p>
-      <br><br><b>Process Synchronization:</b></br></br>
-      Process synchronization is a crucial concept in concurrent computing, which deals with the coordination and communication between multiple processes or threads to ensure proper and orderly execution. It aims to prevent race conditions and data inconsistencies that can arise when multiple processes access shared resources concurrently.
-      <br><b>The Critical Section Problem:</b></br>
-      The critical section problem is a classic synchronization problem that arises in concurrent programming. It refers to a situation where multiple processes or threads share a common resource (e.g., shared memory, file, or I/O device), and each process has a section of code called the "critical section" that accesses and modifies the shared resource. The goal is to ensure that only one process can execute its critical section at a time while others wait, ensuring mutual exclusion and preventing conflicts.
-      <br><b>Synchronization Hardware:</b></br>
-      Synchronization hardware includes specialized processor instructions and memory barrier operations provided by modern CPUs to support process synchronization. These hardware mechanisms ensure that memory operations are executed in a particular order and are not reordered or optimized in ways that could lead to synchronization issues. Examples of synchronization hardware include atomic compare-and-swap (CAS) operations, memory barriers, and cache coherence protocols.
-      <br><b>Semaphores:</b></br>
-      Semaphores are synchronization primitives used to coordinate the access to shared resources among multiple processes or threads. They were introduced by Dutch computer scientist Edsger W. Dijkstra. A semaphore is essentially an integer variable that can be accessed atomically and supports two fundamental operations:
-      <br><b>Wait (P) operation:</b> Decreases the semaphore value. If the value becomes negative, the process is blocked, and its execution is suspended until the semaphore becomes non-negative.</br>
-      <br><b>Signal (V) operation:</b> Increases the semaphore value. If any processes were blocked on this semaphore, one of them is woken up and allowed to proceed.</br>
-      Semaphores can be used to implement various synchronization mechanisms, including mutual exclusion and coordination among processes.
-      <br><b>Monitors:</b></br>
-      Monitors are a higher-level synchronization construct that combines data (shared resource) and procedures (methods) to operate on that data in a single unit. Monitors encapsulate shared resources and enforce mutual exclusion by allowing only one process to enter the monitor at a time. If a process attempts to enter the monitor while another process is inside, it will be blocked until the monitor becomes available.
+<pre>
+      &lt!-- Create function to add two numbers --&gt
+      &lt?php
       
-</p>
+      
+        function add($no_1, $no_2)
+        {
+            echo $result = $no_1 + $no_2;
+            return $result;
+        }
+         add(10,20);
+      
+      ?&gt
+</pre>
 
+
+
+
+if, else, while , do while, for 
+
+
+
+<pre>
+      &lt!-- Check the eligibility to vote by verifying the age --&gt
+      
+      
+      
+      
+      &lt?php
+      $age = 19;
+      if($age &gt=18)
+      {
+          echo "You are eligible to Vote";
+      }
+      else
+      {
+        echo "You are not eligible to vote";
+      }
+      ?&gt
+</pre>
+
+
+
+<pre>
+      &lt!-- Printing 10 natural numbers using the While loop --&gt
+      &lt?php
+      $no =1;
+      while($no &lt=10)
+      {
+          echo $no;
+          $no = $no + 1;
+      }
+      ?&gt
+</pre>
+
+<pre>
+      $lt!-- Printing 10 natural numbers using the Do While loop --&gt
+      &lt?php
+      $no =1;
+      do
+      {
+          echo  $no;
+          echo ",";
+          $no = $no + 1;
+      }while($no &lt=10)
+      ?&gt
+</pre>
+
+<pre>
+      &lt!-- Printing 10 natural numbers using the for loop --&gt
+      &lt?php
+      $no =1;
+      for($no = 1;$no&lt=10;$no++)
+      {
+          echo $no.",";
+      }
+      ?&gt
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+building block of PHP with detailed explanations and example programs:
+
+
+1. Variables:
+
+
+<p>Definition: Variables are used to store and manipulate data in PHP. They are declared using the $ sign followed by the variable name. PHP is loosely typed, meaning variables can change their data type during runtime.</p>
+
+
+<p>Explanation: Variables act as containers that hold values. They can store various types of data, such as integers, strings, arrays, and more. Variables must be declared before they are used.</p>
+
+
+<p>Example Program:</p>
+
+
+
+<pre>
+      &lt?php
+      $name = "John";
+      $age = 30;
+      $height = 5.9;
+      
+      
+      echo "Name: " . $name . "\n"; // Output: Name: John
+      echo "Age: " . $age . "\n";   // Output: Age: 30
+      echo "Height: " . $height;    // Output: Height: 5.9
+      ?&gt
+</pre>
+
+
+2. Data Types:
+
+
+Definition: PHP supports various data types, including integers, floats, strings, booleans, arrays, objects, and NULL. The data type of a variable is automatically determined based on the assigned value.
+
+
+Explanation: Data types define the kind of data that a variable can hold. PHP automatically converts data between types as needed.
+
+
+Example Program:
+
+
+php
+Copy code
+<pre>
+      &lt?php
+      $integerVar = 42;
+      $floatVar = 3.14;
+      $stringVar = "Hello";
+      $booleanVar = true;
+      $arrayVar = array(1, 2, 3);
+      $nullVar = null;
+      
+      
+      echo gettype($integerVar) . "\n"; // Output: integer
+      echo gettype($floatVar) . "\n";   // Output: double
+      echo gettype($stringVar) . "\n";  // Output: string
+      echo gettype($booleanVar) . "\n"; // Output: boolean
+      echo gettype($arrayVar) . "\n";   // Output: array
+      echo gettype($nullVar);           // Output: NULL
+      ?&gt
+</pre>
+3. Operators and Expressions:
+
+<p></p>
+<p>Definition: PHP provides a wide range of operators, such as arithmetic, comparison, logical, and assignment operators. Expressions combine variables and values using operators to perform operations.</p>
+
+
+<p>Explanation: Operators allow us to perform various computations and comparisons in PHP. Expressions are combinations of variables, values, and operators, and they evaluate to a result.</p>
+
+
+<p>Example Program:</p>
+
+
+
+<pre>
+      &lt?php
+      $number1 = 10;
+      $number2 = 5;
+      
+      
+      // Arithmetic Operators
+      $resultAdd = $number1 + $number2; // 10 + 5 = 15
+      $resultSub = $number1 - $number2; // 10 - 5 = 5
+      $resultMul = $number1 * $number2; // 10 * 5 = 50
+      $resultDiv = $number1 / $number2; // 10 / 5 = 2
+      
+      
+      // Comparison Operators
+      $isGreater = ($number1 > $number2); // true
+      $isEqual = ($number1 == $number2); // false
+      
+      
+      // Logical Operators
+      $isTrue = true;
+      $isFalse = false;
+      $resultAnd = $isTrue && $isFalse; // false
+      $resultOr = $isTrue || $isFalse; // true
+      $resultNot = !$isTrue; // false
+      
+      
+      // Concatenation Operator
+      $text1 = "Hello, ";
+      $text2 = "PHP!";
+      $concatenatedText = $text1 . $text2; // "Hello, PHP!"
+      
+      
+      echo $resultAdd . "\n"; // Output: 15
+      echo $resultSub . "\n"; // Output: 5
+      echo $resultMul . "\n"; // Output: 50
+      echo $resultDiv . "\n"; // Output: 2
+      echo $isGreater . "\n"; // Output: 1 (true is converted to 1 in echo)
+      echo $isEqual . "\n";   // Output: (empty, false is converted to empty in echo)
+      echo $resultAnd . "\n"; // Output: (empty, false is converted to empty in echo)
+      echo $resultOr . "\n";  // Output: 1 (true is converted to 1 in echo)
+      echo $resultNot . "\n"; // Output: (empty, false is converted to empty in echo)
+      echo $concatenatedText; // Output: Hello, PHP!
+      ?&gt
+</pre>
+
+<br>
+
+4. Constants:
+
+
+<p>Definition: Constants are similar to variables but are defined using the define() function. Once defined, constants cannot be changed or redefined during script execution.</p>
+
+
+<p>Explanation: Constants hold values that remain constant throughout the execution of the script. They provide a way to define and use fixed values that do not change during the program's execution.</p>
+
+
+<p>Example Program:</p>
+
+
+
+<pre>
+      &lt?php
+      define("PI", 3.14);
+      define("GREETING", "Hello, World!");
+      
+      
+      echo PI . "\n";       // Output: 3.14
+      echo GREETING . "\n"; // Output: Hello, World!
+      ?&gt
+</pre>
+
+<br>
+5. Flow Control Functions in PHP:
+
+<br>
+
+Switching Flow:
+
+<br>
+Definition: The switch statement is used to select one of many blocks of code to be executed based on the value of an expression. It is a cleaner alternative to multiple nested if-else statements.
+
+<br>
+Explanation: The switch statement evaluates the expression once and then compares it with the values of each case. If a match is found, the corresponding block of code is executed.
+
+<br>
+Example Program:
+
+
+
+<pre>
+      &lt?php
+      $day = "Monday";
+      
+      
+      switch ($day) {
+          case "Monday":
+              echo "It's Monday!";
+              break;
+          case "Tuesday":
+              echo "It's Tuesday!";
+              break;
+          default:
+              echo "It's another day!";
+      }
+      // Output: It's Monday!
+      ?&gt
+</pre>
+
+<br>
 
 
 <br>
-      <b>
-            <p>Classic problems of synchronization </p>
-      </b>
-</br>
-<ol>
-      are well-known challenges in concurrent programming that demonstrate the need for proper coordination and communication between multiple processes or threads. These problems highlight various synchronization issues like race conditions, deadlocks, and resource contention. Some of the classic problems of synchronization include:
-      <b><br>1. The Dining Philosophers Problem:</br></b>
-      In this problem, several philosophers sit around a table with a bowl of rice and a single chopstick placed between each pair of adjacent philosophers. The philosophers alternate between thinking and eating. To eat, a philosopher must pick up both chopsticks (left and right). The challenge is to design a solution to prevent deadlocks and ensure that all philosophers get a chance to eat without causing starvation.
-      <b><br>2. The Producer-Consumer Problem (Bounded-Buffer Problem):</br></b>
-      This problem involves two types of processes: producers, which generate data, and consumers, which consume the data. They share a common, fixed-size buffer. The issue is to synchronize the producers and consumers properly to avoid race conditions, buffer overflows, or underflows.
-      <b><br>3. The Readers-Writers Problem:</br></b>
-      The problem deals with multiple readers and writers accessing a shared resource, such as a database or a file. Multiple readers can access the resource simultaneously, but only one writer can access it exclusively. The challenge is to design a solution that allows concurrent reading while ensuring mutual exclusion between readers and writers.
-      <b><br>4. The Sleeping Barber Problem:</br></b>
-      In this scenario, a barber shop has one barber and several chairs for waiting customers. If there are no customers, the barber sleeps. When a customer arrives, they either wake the barber to get a haircut or, if all chairs are occupied, leave the shop. The problem is to coordinate the barber and the customers to avoid race conditions and prevent customers from leaving when the barber is available.
-      <b><br>5. The Cigarette Smokers Problem:</br></b>
-      This problem involves three smokers, each of whom has an infinite supply of one ingredient needed to make a cigarette: tobacco, paper, or matches. There is also a tobacco company agent responsible for supplying two random ingredients. The smokers must coordinate their actions to ensure that each can successfully make a cigarette without deadlocking or wasting ingredients.
-      <b><br>6. The Bridge Crossing Problem:</br></b>
-      This problem features a bridge that can only accommodate a limited number of vehicles at a time. Vehicles of different types (e.g., cars, trucks) need to cross the bridge in both directions. The challenge is to design a solution that allows the vehicles to cross the bridge safely and efficiently, avoiding collisions and deadlocks
+Loops:
+
+
+<br>
+Definition: PHP supports different types of loops: while, for, do-while, and foreach. Loops are used to execute a block of code repeatedly based on a condition or a collection of elements.
+
+
+<br>
+Explanation: Loops are essential for repetitive tasks, and they allow us to perform actions multiple times without duplicating code.
+
+<br>
+Example Program:
+
+
+
+<pre>
+      &lt?php
+      // While Loop
+      $i = 1;
+      while ($i &lt= 5) {
+          echo $i . " ";
+          $i++;
+      }
+      // Output: 1 2 3 4 5
       
-</ol>
+      
+      // For Loop
+      for ($j = 1; $j &lt= 5; $j++) {
+          echo $j . " ";
+      }
+      // Output: 1 2 3 4 5
+      
+      
+      // Foreach Loop
+      $colors = array("Red", "Green", "Blue");
+      foreach ($colors as $color) {
+          echo $color . " ";
+      }
+      // Output: Red Green Blue
+      ?&gt
+</pre>
+
+
+<br>
+Code Blocks and Browser Output:
+
+<br>
+
+Definition: Code blocks in PHP are enclosed within curly braces {}. Output to the browser can be achieved using echo, print, or by directly writing HTML.
+
+<br>
+Explanation: Code blocks allow us to group multiple statements together. Browser output can be used to display dynamic content on a webpage.
+<br>
+
+Example Program:
+
+
+
+<pre>
+      &lt?php
+      // Code Block
+      if (true) {
+          echo "This is inside the code block.";
+      }
+      
+      
+      // Browser Output
+      echo "&lth1&gtHello, PHP!&lt/h1&gt";
+      echo "&ltp&gtWelcome to PHP programming.&lt/p&gt";
+      ?&gt
+</pre>
+
+<br>
+<br>
+
+6. Working with Functions:
+
+
+Defining Functions:
+
+
+<br>
+Definition: Functions in PHP are defined using the function keyword followed by the function name and a pair of parentheses. The code to be executed is enclosed within curly braces.
+
+<br>
+
+Explanation: Functions allow us to break down complex tasks into smaller, manageable parts. They promote reusability and modularity in code.
+
+<br>
+Example Program:
+
+
+
+&lt?php
+function greet() {
+    echo "Hello, PHP Function!";
+}
+
+
+greet(); // Output: Hello, PHP Function!
+?&gt
+
+
+
+Calling Functions:
+
+<br>
+
+Definition: Once a function is defined, it can be called by using its name followed by parentheses.
+<br>
+
+Explanation: Function calls execute the code inside the function, allowing us to reuse the same logic at different points in the program.
+
+<br>
+
+Example Program:
+
+
+php
+Copy code
+&lt?php
+function add($a, $b) {
+    return $a + $b;
+}
+
+
+$result = add(10, 5);
+echo $result; // Output: 15
+?&gt
+Variable Scope:
+<br>
+
+Definition: PHP supports different variable scopes, including global scope and local scope. Variables declared inside a function are usually local and not accessible outside the function, while global variables can be accessed from any part of the script.
+
+<br>
+Explanation: Variable scope defines where a variable is accessible in the code. Local variables are only accessible within the function they are declared in, while global variables can be accessed from anywhere in the script.
+
+<br>
+Example Program:
+
+
+php
+Copy code
+&lt?php
+$globalVar = "I am a global variable.";
+
+
+function testScope() {
+    global $globalVar;
+    $localVar = "I am a local variable.";
+    echo $globalVar . "\n"; // Output: I am a global variable.
+    echo $localVar . "\n";  // Output: I am a local variable.
+}
+
+
+testScope();
+?&gt
+<br>
+Saving State between Function calls with the Static statement:
+
+<br>
+Definition: The static keyword is used to declare a variable with static scope. It retains its value between function calls, allowing for persistent state across calls.
+
+<br>
+Explanation: The static keyword preserves the value of a variable between function calls. It allows a variable to retain its state even after the function finishes execution.
+
+<br>
+Example Program:
+
+
+
+&lt?php
+function increment() {
+    static $count = 0;
+    $count++;
+    echo "Count: " . $count . "\n";
+}
+
+
+increment(); // Output: Count: 1
+increment(); // Output: Count: 2
+increment(); // Output: Count: 3
+?&gt
+
+<br>
+
+More about arguments:
+<br>
+
+Definition: Functions can accept arguments passed in the parentheses when the function is called. Arguments can be used as input to the function's logic and can be of any data type.
+<br>
+
+Explanation: Function arguments allow us to pass data into a function for processing. They enable us to customize the behavior of a function based on different inputs.
+
+<br>
+Example Program:
+
+
+
+<pre>
+      &lt?php
+      function sum(...$numbers) {
+          $total = 0;
+          foreach ($numbers as $num) {
+              $total += $num;
+          }
+          return $total;
+      }
+      
+      
+      echo sum(1, 2, 3);        // Output: 6
+      echo sum(10, 20, 30, 40); // Output: 100
+      ?&gt
+</pre>
+
+
+
+
+
+
+
+
+
+		
+		
+
 
 
 

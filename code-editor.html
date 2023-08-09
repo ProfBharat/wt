@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Code Editor with Output</title>
+    <style>
+        #editor-container {
+            display: flex;
+        }
+        #code-editor {
+            flex: 1;
+            height: 300px;
+            resize: vertical;
+        }
+        #output-container {
+            flex: 1;
+            margin-left: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Code Editor with Output</h1>
+
+<div id="editor-container">
+    <textarea id="code-editor">
+
+        
+    </textarea>
+    <div id="output-container">
+        <h2>Output</h2>
+        <div id="output"></div>
+    </div>
+</div>
+
+<button onclick="runcode.js">Run Code</button>
+
+<script>
+    function runCode() {
+        const code = document.getElementById('code-editor').value;
+        const outputDiv = document.getElementById('output');
+        
+        try {
+            outputDiv.innerHTML = ''; // Clear previous output
+            const iframe = document.createElement('iframe');
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            iframe.style.border = 'none';
+            outputDiv.appendChild(iframe);
+            
+            const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+            iframeDoc.open();
+            iframeDoc.write(code);
+            iframeDoc.close();
+        } catch (error) {
+            outputDiv.innerHTML = '<p style="color: red;">Error: ' + error.message + '</p>';
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+#editor-container {
+    display: flex;
+}
+#code-editor {
+    flex: 1;
+    height: 300px;
+    resize: vertical;
+    font-family: 'Courier New', Courier, monospace;
+}
+#output-container {
+    flex: 1;
+    margin-left: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}g
+
+h1{
+    text-align: center;
+}

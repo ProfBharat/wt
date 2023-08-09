@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Code Editor with Output</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/htmlmixed/htmlmixed.min.js"></script>
+</head>
+<body>
+
+<h1>Code Editor with Output</h1>
+
+<div>
+    <textarea id="code-editor"></textarea>
+</div>
+
+<button onclick="runCode()">Run Code</button>
+
+<div id="output-container">
+    <h2>Output</h2>
+    <iframe id="output"></iframe>
+</div>
+
+<script>
+    const codeEditor = CodeMirror.fromTextArea(document.getElementById('code-editor'), {
+        lineNumbers: true,
+        mode: 'htmlmixed'
+    });
+
+    function runCode() {
+        const code = codeEditor.getValue();
+        const outputIframe = document.getElementById('output');
+        const outputDoc = outputIframe.contentDocument || outputIframe.contentWindow.document;
+        
+        outputDoc.open();
+        outputDoc.write(code);
+        outputDoc.close();
+    }
+</script>
+
+</body>
+</html>
