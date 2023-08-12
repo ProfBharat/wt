@@ -7,7 +7,7 @@
                   content="width=device-width, initial-scale=1.0"
             />
             <link rel="stylesheet" href="index.css" />
-            <title>Operating System Notes</title>
+            <title>WD Notes</title>
       </head>
       <body>
             <!-- Navigation Menu -->
@@ -24,75 +24,236 @@
 
 
             <h1>
-                  Operating Systems
+                  WD
                   Unit -III notes
                   Instructor: Bharat Kumar
             </h1>
             
-            Syllabus: Memory Management and Virtual Memory - Logical & physical Address Space, Swapping, Contiguous Allocation, Paging, Structure of Page Table. Segmentation, Segmentation with Paging, Virtual Memory, Demand Paging, Performance of Demanding Paging, Page Replacement Page Replacement Algorithms, Allocation of Frames.
-            
-            
-            
-            <br>Logical Address Space:</br>
-            <br>The logical address space refers to the set of all addresses that a process can reference during its execution. It is the memory address space seen by the process, starting from address 0 and extending up to the maximum address that the process can access.</br>
-            <br>Physical Address Space:</br>
-            The physical address space represents the actual physical memory addresses available in the system. It is the memory address space of the physical memory (RAM) installed in the computer.
-            <br>Swapping:</br>
-            Swapping is a memory management technique where a process is temporarily moved out of main memory (RAM) and into secondary storage (usually disk) to make room for other processes. When the process needs to run again, it is swapped back into the main memory from the secondary storage.
-            <br>Contiguous Allocation:</br>
-            Contiguous allocation is a memory allocation technique where each process is allocated a contiguous block of memory in the main memory (RAM). The process occupies consecutive memory locations, making it easier to access and manage memory, but it can lead to fragmentation issues.
-            <br>Paging:</br>
-            Paging is a memory management scheme that eliminates the need for contiguous allocation. In paging, the process's logical address space is divided into fixed-size blocks called pages. The physical memory is divided into equal-sized blocks called frames. The mapping between logical pages and physical frames is maintained by the operating system through a page table.
-            
+            <p>PHP Arrays:</p>
 
-            <br>Structure of Page Table:</br>
-            The page table is a data structure used to keep track of the mapping between logical pages and physical frames in paging. Each entry in the page table contains the mapping information for a specific logical page. Commonly, the page table is an array or hash table, and the page number serves as an index to find the corresponding physical frame number.
-            <br>Segmentation:</br>
-            Segmentation is another memory management technique where a process's logical address space is divided into variable-sized segments. Segments represent different parts of the program, such as code, data, stack, etc. Each segment is assigned a specific size and logical address.
-            <br>Segmentation with Paging:</br>
-            Segmentation with paging is a combination of segmentation and paging. The logical address space is divided into segments, and each segment is further divided into pages. The operating system maintains separate tables for segment and page mappings to translate logical addresses to physical addresses.
-            <br>Virtual Memory:</br>
-            Virtual memory is a memory management technique that allows processes to use more memory than physically available in the main memory. It provides an illusion of a larger address space by using secondary storage (like disk) as an extension of the physical memory. Portions of a process's logical address space are loaded into physical memory only when they are needed (demand paging).
-            <br>Demand Paging:</br>
-            Demand paging is a technique used in virtual memory systems where pages are loaded into the main memory only when they are required during the execution of a process. It helps in conserving memory space and optimizing the overall system performance.
-            <br>Performance of Demand Paging:</br>
-            The performance of demand paging depends on factors such as:
-            <br>Page Fault Rate: The rate at which pages are not found in the main memory and need to be fetched from secondary storage. A higher page fault rate can result in slower performance due to frequent disk accesses.</br>
-            <br>Page Replacement Algorithm: The algorithm used to decide which page to replace when there is no free space in the main memory. Efficient page replacement algorithms like LRU (Least Recently Used) can improve performance by reducing the number of unnecessary page swaps.</br>
-            <br>I/O Overhead: The time taken to transfer pages between disk and memory can significantly impact performance. Reducing I/O overhead, for example through caching strategies, can improve demand paging performance.</br>
-            <br>Program Behavior: The access patterns of processes, such as spatial locality (the tendency to access nearby memory locations), affect how effectively demand paging can utilize the main memory.</br>
-            
+<p>Definition: PHP arrays are used to store multiple values in a single variable. An array can hold different data types, such as integers, strings, and even other arrays.</p>
 
-            Page replacement algorithms are used in virtual memory management to determine which page to remove from the main memory (RAM) when a new page needs to be loaded, and there is no available free space. The goal is to minimize page faults and optimize the usage of physical memory. Several page replacement algorithms have been developed over the years, each with its advantages and disadvantages. Here are some commonly used page replacement algorithms:
-<br>Optimal Page Replacement (OPT or MIN):</br>
-The optimal page replacement algorithm selects the page for replacement that will not be used for the longest period in the future. In theory, this algorithm produces the minimum number of page faults, but it is often not practical to implement because it requires knowing the future reference pattern of pages, which is generally not possible.
-<br>FIFO (First-In-First-Out):</br>
-The FIFO page replacement algorithm replaces the oldest page in memory, i.e., the page that has been in memory the longest. It uses a simple queue data structure to maintain the order of pages in memory. While easy to implement, FIFO suffers from the "Belady's Anomaly," where increasing the number of allocated frames can lead to more page faults.
-<br>LRU (Least Recently Used):</br>
-The LRU page replacement algorithm replaces the page that has not been used for the longest period of time. It requires maintaining a record of the order in which pages were accessed, which can be achieved using a linked list, stack, or counter implementation. LRU generally performs well but can be challenging to implement efficiently in hardware.
-<br>LFU (Least Frequently Used):</br>
-The LFU page replacement algorithm replaces the page that has the least number of references or is least frequently used. LFU keeps track of the number of references to each page and selects the page with the lowest count for replacement. However, LFU can suffer from the "one-hit wonders" problem, where pages with high initial frequency are kept even if they are not used again.
-<br>MFU (Most Frequently Used):</br>
-The MFU page replacement algorithm is the opposite of LFU. It replaces the page that has been referenced most frequently. Like LFU, MFU can also suffer from the "one-hit wonders" problem and may not always perform optimally.
-<br>Second-Chance (Clock) Algorithm:</br>
-The Second-Chance page replacement algorithm is a modification of FIFO. It uses a circular list to store pages in memory and gives each page a "reference bit." When a page is accessed, its reference bit is set to 1. The algorithm periodically scans the list, and if a page's reference bit is 0, it is replaced. If the reference bit is 1, it is cleared, and the page is given a second chance.
-<br>Random Page Replacement:</br>
-The Random page replacement algorithm selects a random page from memory for replacement. While simple to implement, it does not consider page access patterns or usage frequency and may not perform well compared to other algorithms.
+<p>Explanation: Arrays are a fundamental data structure in PHP and are commonly used for grouping related data together. Each value in an array is associated with an index or a key, starting from 0.</p>
+
+<p>Example Program:</p>
 
 
-Allocation of frames refers to the process of assigning a fixed amount of physical memory (RAM) to a specific process or processes running in the system. In modern operating systems, this is a crucial aspect of memory management, as it determines how memory is partitioned and distributed among active processes. There are various strategies for frame allocation, each with its advantages and trade-offs. Some common techniques include:
-<br>Equal Allocation:</br>
-In equal allocation, the available physical memory is divided equally among all active processes. Each process is allocated the same number of frames, regardless of its size or memory requirements. This approach is simple to implement but may not be the most efficient, especially if some processes require more memory than others.
-<br>Proportional Allocation:</br>
-Proportional allocation allocates memory frames to processes based on their size or memory requirements. Larger processes receive more frames than smaller ones. The allocation can be done in proportion to process size or some other metric, such as priority or the amount of work the process is currently performing. Proportional allocation allows more efficient memory utilization, but it can be more complex to manage.
-<br>Priority-Based Allocation:</br>
-In priority-based allocation, memory frames are allocated to processes based on their priority levels. Higher-priority processes receive more frames, while lower-priority processes may receive fewer frames. This approach aims to ensure that critical processes have sufficient memory to execute efficiently, but it may lead to resource contention if lower-priority processes are starved of memory.
-<br>Global vs. Local Allocation:</br>
-Global allocation allocates frames across all processes in the system, making all frames available for any process to use. On the other hand, local allocation assigns specific sets of frames to each process, making them accessible only to that particular process. Global allocation provides more flexibility but can lead to conflicts and contention, while local allocation ensures more isolation but may lead to inefficient memory usage.
-<br>Dynamic Allocation:</br>
-Dynamic allocation allows the number of frames allocated to a process to change over time based on its changing memory requirements. This is particularly useful for systems with varying workloads, as it allows memory to be adjusted on-the-fly based on demand.
-<br>Page-Fault Frequency Control:</br>
-Some systems use page-fault frequency control to dynamically adjust the number of frames allocated to a process. If a process frequently incurs page faults, it may receive more frames to improve its performance. Conversely, if a process's page fault rate is low, some of its frames may be reallocated to other processes.
-<br></br>
+<textarea name="" id="" cols="50" rows="20">
+      // Creating an array
+      $fruits = array("Apple", "Banana", "Orange");
+      
+      // Accessing array elements
+      echo $fruits[0]; // Output: Apple
+      echo $fruits[1]; // Output: Banana
+      echo $fruits[2]; // Output: Orange
+      
+      // Adding elements to an array
+      $fruits[] = "Mango";
+      $fruits[] = "Grapes";
+      
+      // Using foreach loop to iterate through an array
+      foreach ($fruits as $fruit) {
+          echo $fruit . " ";
+      }
+      // Output: Apple Banana Orange Mango Grapes
+</textarea>
+
+
+<p></p>
+<p>Some Array-Related Functions:</p>
+
+<p>
+      count(): Returns the number of elements in an array. <br>
+      array_push(): Adds one or more elements to the end of an array. <br>
+      array_pop(): Removes and returns the last element of an array. <br>
+      array_merge(): Merges two or more arrays into a single array. <br>
+</p>
+
+
+<p>Example Program:</p>
+
+<textarea name="" id="" cols="30" rows="10">
+      $numbers = array(1, 2, 3, 4, 5);
+      
+      // count() function
+      echo count($numbers); // Output: 5
+      
+      // array_push() function
+      array_push($numbers, 6, 7);
+      print_r($numbers); // Output: Array ( [0] => 1 [1] => 2 [2] => 3 [3] => 4 [4] => 5 [5] => 6 [6] => 7 )
+      
+      // array_pop() function
+      $lastElement = array_pop($numbers);
+      echo $lastElement; // Output: 7
+      
+      // array_merge() function
+      $moreNumbers = array(8, 9, 10);
+      $mergedArray = array_merge($numbers, $moreNumbers);
+      print_r($mergedArray); 
+      // Output: Array ( [0] => 1 [1] => 2 [2] => 3 [3] => 4 [4] => 5 [5] => 6 [6] => 8 [7] => 9 [8] => 10 )
+</textarea>
+
+
+<p>Working with Objects:</p>
+
+<p>Creating Objects:</p>
+
+<p>Definition: In PHP, objects are instances of classes. A class is a blueprint for creating objects that define properties (variables) and methods (functions).</p>
+
+<p>Explanation: When you create an object, you are creating an instance of a class, and each object has its own set of properties and methods defined in the class.</p>
+
+<p>Example Program:</p>
+
+
+<textarea name="" id="" cols="30" rows="10">
+      class Car {
+          public $brand;
+          public $model;
+      
+          public function start() {
+              echo "The car is starting.";
+          }
+      }
+      
+      $myCar = new Car();
+      $myCar->brand = "Toyota";
+      $myCar->model = "Corolla";
+      
+      echo $myCar->brand; // Output: Toyota
+      echo $myCar->model; // Output: Corolla
+</textarea>
+
+
+<p>Object Instance:</p>
+<p></p>
+<p>Definition: An object instance is an individual occurrence or representation of a class. It is a specific object created from the class's blueprint.</p>
+
+<p>Explanation: When you create an object using the new keyword, you are creating an instance of the class. Each object instance has its own unique set of properties and can invoke methods defined in the class.</p>
+
+<p>Example Program:</p>
+
+
+<textarea name="" id="" cols="60" rows="30">
+      class Book {
+          public $title;
+          public $author;
+      
+          public function displayInfo() {
+              echo "Title: " . $this->title . ", Author: " . $this->author;
+          }
+      }
+      
+      $book1 = new Book();
+      $book1->title = "The Great Gatsby";
+      $book1->author = "F. Scott Fitzgerald";
+      
+      $book2 = new Book();
+      $book2->title = "To Kill a Mockingbird";
+      $book2->author = "Harper Lee";
+      
+      $book1->displayInfo(); // Output: Title: The Great Gatsby, Author: F. Scott Fitzgerald
+      $book2->displayInfo(); // Output: Title: To Kill a Mockingbird, Author: Harper Lee
+</textarea>
+
+<p>Working with Strings, Dates, and Time:</p>
+
+<p>Formatting Strings with PHP:</p>
+
+<p>Definition: PHP provides various functions to format strings, such as sprintf() and printf(). These functions allow you to control the output's appearance by specifying placeholders and format specifiers.</p>
+
+<p>Explanation: Formatting strings helps to present data in a structured and readable way, especially when dealing with numbers, dates, and other types of data.</p>
+
+<p>Example Program:</p>
+
+
+<textarea name="" id="" cols="50" rows="10">
+      $number = 42;
+      $pi = 3.14159265359;
+      $name = "John";
+      
+      // Using sprintf()
+      $formattedNumber = sprintf("%04d", $number);
+      $formattedPi = sprintf("%.2f", $pi);
+      $formattedName = sprintf("%10s", $name);
+      
+      echo $formattedNumber; // Output: 0042
+      echo $formattedPi;     // Output: 3.14
+      echo $formattedName;   // Output:       John
+</textarea>
+<p></p>
+<p>Investigating Strings with PHP:</p>
+
+<p>Definition: PHP provides several functions to investigate and manipulate strings, such as strlen(), strpos(), and substr().</p>
+
+<p>Explanation: These functions allow you to perform various operations on strings, such as finding the length, searching for substrings, and extracting parts of a string.</p>
+
+<p>Example Program:</p>
+
+
+<p>
+      <textarea name="" id="" cols="50" rows="15">
+            $text = "Hello, World!";
+            $length = strlen($text);
+            $position = strpos($text, "World");
+            $substring = substr($text, 0, 5);
+      
+            echo $length;     // Output: 13
+            echo $position;   // Output: 7
+            echo $substring;  // Output: Hello
+      </textarea>
+</p>
+<p></p>
+
+
+<p>Manipulating Strings with PHP:</p>
+
+<p>Definition: PHP provides functions for manipulating strings, such as str_replace(), strtolower(), strtoupper(), and trim().</p>
+
+<p>Explanation: These functions allow you to perform tasks like replacing text, converting case, and removing whitespace from strings.</p>
+
+<p>Example Program:</p>
+
+
+<textarea name="" id="" cols="50" rows="15">
+      $text = "Hello, World!";
+      $newText = str_replace("World", "PHP", $text);
+      $lowerCaseText = strtolower($text);
+      $upperCaseText = strtoupper($text);
+      $trimmedText = trim("   Hello,   ");
+      
+      echo $newText;       // Output: Hello, PHP!
+      echo $lowerCaseText; // Output: hello, world!
+      echo $upperCaseText; // Output: HELLO, WORLD!
+      echo $trimmedText;   // Output: Hello,
+</textarea>
+
+
+<p>Using Date and Time Functions in PHP:</p>
+
+<p>Definition: PHP provides several date and time functions, such as date(), strtotime(), and time(), to work with date and time data.</p>
+
+<p>Explanation: These functions allow you to format and manipulate dates and times, calculate differences, and perform various date-related operations.</p>
+
+<p>Example Program:</p>
+
+<textarea name="" id="" cols="60" rows="20"></textarea>
+<textarea name="" id="" cols="30" rows="10">
+      // Formatting the current date
+      $currentDate = date("Y-m-d"); // Output: 2023-07-19
+      
+      // Formatting a specific date
+      $timestamp = strtotime("2023-07-19");
+      $formattedDate = date("F d, Y", $timestamp); // Output: July 19, 2023
+      
+      // Getting the current timestamp
+      $currentTime = time();
+      
+      echo $currentDate . "<br>";
+      echo $formattedDate . "<br>";
+      echo $currentTime . "<br>";
+</textarea>
+
+
+<p></p>
       </body>
 </html>

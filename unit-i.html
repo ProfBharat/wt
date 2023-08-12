@@ -7,7 +7,7 @@
               name="viewport"
               content="width=device-width, initial-scale=1.0"
         />
-        <link rel="stylesheet" href="unit-i.css" />
+        <link rel="stylesheet" href="index.css" />
         <link
               rel="stylesheet"
               href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -36,379 +36,213 @@
       </nav>
     
 
-<h1>Introduction to HTML:</h1>
-
-<p>
-      <b>Definition</b>: HTML (Hypertext Markup Language) is the standard markup
-      language used to create and design web pages. It provides a structured
-      format for presenting content on the internet. HTML uses various tags to
-      define the structure and elements of a web page, such as headings,
-      paragraphs, links, images, and more.
-</p>
-
-<p>
-      <b>Explanation</b>: HTML documents consist of elements enclosed in tags,
-      which are interpreted by web browsers to display content. HTML tags are
-      used to format and structure the content, and they are represented by
-      angle brackets (< >). Tags can have attributes that provide additional
-      information about the elements.
-</p>
-
-Example Program:1
-
-<div id="container">
-    <div id="code-container">
-        <pre class="program-1">
-            &lt!DOCTYPE html&gt
-            &lthtml&gt
-            &lthead&gt
-                &lttitle&gtMy First Web Page&lt/title&gt
-            &lt/head&gt
-            &ltbody&gt
-                &lth1&gtHello, World!&lt/h1&gt
-                &ltp&gtThis is my first web page created with HTML.&lt/p&gt
-            &lt/body&gt
-            &lt/html&gt
-        </pre>
-    </div>
-    
-    <div id="output-container">
-    
-        <!DOCTYPE html>
-        <html>
-        <head>
-            <title>My First Web Page</title>
-        </head>
-        <body>
-            <h1>Hello, World!</h1>
-            <p>This is my first web page created with HTML.</p>
-        </body>
-        </html>
-    
-    
-    </div>
-</div>
 
 <br>
-<br>
-<hr>
+Introduction to HTML:
+
+Definition: HTML (Hypertext Markup Language) is the standard markup language used to create and design web pages. It provides a structured format for presenting content on the internet. HTML uses various tags to define the structure and elements of a web page, such as headings, paragraphs, links, images, and more.
+
+Explanation: HTML documents consist of elements enclosed in tags, which are interpreted by web browsers to display content. HTML tags are used to format and structure the content, and they are represented by angle brackets (< >). Tags can have attributes that provide additional information about the elements.
+
+Example Program:
+
+html
+Copy code
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First Web Page</title>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <p>This is my first web page created with HTML.</p>
+</body>
+</html>
 
 
-<h1>Code Editor with Output</h1>
+Basic HTML:
 
-<div id="container-editor">
+Definition: The basic HTML structure consists of the <!DOCTYPE html> declaration, the opening <html> tag, and the closing </html> tag. Inside the <html> tag, there are two sections: <head> and <body>. The <head> section contains meta-information about the document, while the <body> section contains the visible content of the web page.
 
-    <textarea id="code-editor">
-        <h1>hi</h1>
-    </textarea>
+Explanation: The <head> section is used to include metadata such as the document title, character encoding, CSS styles, and other elements that are not directly displayed on the page. The <body> section contains the visible content that users see when they visit the web page.
 
-    <div id="output-editor">
-        <h2 >Output</h2>
-        <div id="output"></div>
-    </div>
+Document Body Text:
 
-</div>
+Definition: In the <body> section, we can use various tags to define headings, paragraphs, and other text elements. HTML provides tags for different text formatting, such as bold, italic, underline, and more.
 
-<button onclick="runCode()">Run Code</button>
+Explanation: By using appropriate text-related tags, we can structure and style the content of the web page for better readability and visual appeal.
 
+Example Program:
 
-
-<!-- <script > 
-    function runCode() {
-        const code = document.getElementById('code-editor').value;
-        const outputDiv = document.getElementById('output');
-        
-        try {
-            outputDiv.innerHTML = ''; // Clear previous output
-            const iframe = document.createElement('iframe');
-            iframe.style.width = '100%';
-            iframe.style.height = '100%';
-            iframe.style.border = 'none';
-            outputDiv.appendChild(iframe);
-            
-            const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-            iframeDoc.open();
-            iframeDoc.write(code);
-            iframeDoc.close();
-        } catch (error) {
-            outputDiv.innerHTML = '<p style="color: red;">Error: ' + error.message + '</p>';
-        }
-    }
-    
-    </script> -->
-
-
-<p>
-    Basic HTML: Definition: The basic HTML structure consists of the &lt!DOCTYPE
-    html&gt declaration, the opening &lthtml&gt tag, and the closing &lt/html&gt
-    tag. Inside the &lthtml&gt tag, there are two sections: &lthead&gt and
-    &ltbody&gt . The &lthead&gt section contains meta-information about the
-    document, while the &ltbody&gt section contains the visible content of the web
-    page.
-</p> <br>
-<p>
-    Explanation: The &lthead&gt section is used to include metadata such as
-    the document title, character encoding, CSS styles, and other elements that are
-    not directly displayed on the page. The &ltbody&gt section contains the visible
-    content that users see when they visit the web page.
-</p>
-<br>
-<p>
-    Document Body Text:
-    Definition: In the &ltbody&gt section, we can use various tags to define
-    headings, paragraphs, and other text elements. HTML provides tags for different
-    text formatting, such as bold, italic, underline, and more.
-</p>
-<br>
-<p>
-    Explanation: By
-    using appropriate text-related tags, we can structure and style the content of
-    the web page for better readability and visual appeal.
-</p> <br>
-
-Example Program:2 <br>
-
-<pre class="program-2">
-        &lt!DOCTYPE html&gt
-        &lthtml&gt
-        &ltbody&gt
-        &lth1&gtHeading 1&lt/h1&gt
-        &lth2&gtHeading 2&lt/h2&gt
-        &ltp&gtThis is a paragraph.&lt/p&gt
-        &ltp&gtThis is another paragraph.&lt/p&gt
-        &ltstrong&gtThis text is bold.&lt/strong&gt
-        &ltem&gtThis text is italic.&lt/em&gt
-        &lt/body&gt
-        &lt/html&gt
-</pre>
-
+html
+Copy code
+<body>
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+    <strong>This text is bold.</strong>
+    <em>This text is italic.</em>
+</body>
 
 
 Hyperlinks:
 
-<p>Definition: Hyperlinks are created using the &lta&gt tag with the href attribute, which specifies the URL of the link destination. Users can click on the link to navigate to the linked web page.</p>
+Definition: Hyperlinks are created using the <a> tag with the href attribute, which specifies the URL of the link destination. Users can click on the link to navigate to the linked web page.
 
-<p>Explanation: Hyperlinks are an essential feature of the web, enabling users to navigate between different web pages and websites easily.</p>
+Explanation: Hyperlinks are an essential feature of the web, enabling users to navigate between different web pages and websites easily.
 
-
-Example Program: 3
-
-
-<pre>&lt!DOCTYPE html&gt
-    &lthtml&gt
-    &lthead&gt
-        &lttitle&gtMy First Web Page&lt/title&gt
-    &lt/head&gt
-
-    &ltbody&gt
-        &lth1&gtWelcome to My Website&lt/h1&gt
-        &ltp&gtVisit our &lta href="https://www.profbharat.in"&gt My Website&lt/a&gt for more information.&lt/p&gt
-    &lt/body&gt
-    &lt/html&gt
-</pre>
-Adding More Formatting:
-
-<p>Definition: HTML provides additional formatting tags like &ltmark&gt for highlighting text, &ltdel&gt for deleted text (strikethrough), &ltins&gt for inserted text (underlined), &ltsub&gt for subscript, and &ltsup&gt for superscript.<p>
-
-<p>Explanation: These tags help in adding emphasis, marking changes, and displaying special text elements.</p>
-
-Example Program:4
-
-
-<pre>
-    &lt!DOCTYPE html&gt
-    &lthtml&gt
-    &lthead&gt
-        &lttitle&gtMy First Web Page&lt/title&gt
-    &lt/head&gt
-
-    &ltbody&gt
-        &lth1&gtWelcome to My Website&lt/h1&gt
-        &ltp&gtThis is a &ltmark&gthighlighted&lt/mark&gt text.&lt/p&gt
-        &ltp&gtThis is a &ltdel&gtdeleted&lt/del&gt text and &ltins&gtinserted&lt/ins&gt text.&lt/p&gt
-        &ltp&gtThis is a &ltsub&gtsubscript&lt/sub&gt and &ltsup&gtsuperscript&lt/sup&gt text.&lt/p&gt
-    &lt/body&gt
-    &lt/html&gt
-</pre>
-<p>Lists:</p>
-
-<p>Definition: Lists can be represented using the &ltul&gt (unordered list) or &ltol&gt (ordered list) tags. Each list item is defined with the &ltli&gt tag.</p>
-
-<p>Explanation: Lists help organize content into bullet points or numbered items for better readability and presentation.</p>
-
-Example Program:5
-
-
-<pre>&lt!DOCTYPE html&gt
-    &lthtml&gt
-    &lthead&gt
-        &lttitle&gtMy First Web Page&lt/title&gt
-    &lt/head&gt
-
-    &ltbody&gt
-        &lth2&gtUnordered List&lt/h2&gt
-        &ltul&gt
-            &ltli&gtItem 1&lt/li&gt
-            &ltli&gtItem 2&lt/li&gt
-            &ltli&gtItem 3&lt/li&gt
-        &lt/ul&gt
-    
-        &lth2&gtOrdered List&lt/h2&gt
-        &ltol&gt
-            &ltli&gtFirst&lt/li&gt
-            &ltli&gtSecond&lt/li&gt
-            &ltli&gtThird&lt/li&gt
-        &lt/ol&gt
-    &lt/body&gt
-    &lt/html&gt
-</pre>
-Tables:
-
-<p>Definition: Tables are created using the &lttable&gt tag. The table rows are defined with the &lttr&gt tag, and table headers and data cells are represented by &ltth&gt and &lttd&gt tags, respectively.</p>
-
-<p>Explanation: Tables are useful for organizing data into rows and columns, making it easier to compare and analyze information.</p>
-
-Example Program:6
+Example Program:
 
 html
 Copy code
-<div>
-    <pre>&lt!DOCTYPE html&gt
-        &lthtml&gt
-        &lthead&gt
-            &lttitle&gtMy First Web Page&lt/title&gt
-        &lt/head&gt
-    
-        &ltbody&gt
-            &lttable&gt
-                &lttr&gt
-                    &ltth&gtName&lt/th&gt
-                    &ltth&gtAge&lt/th&gt
-                &lt/tr&gt
-                &lttr&gt
-                    &lttd&gtJohn&lt/td&gt
-                    &lttd&gt30&lt/td&gt
-                &lt/tr&gt
-                &lttr&gt
-                    &lttd&gtJane&lt/td&gt
-                    &lttd&gt25&lt/td&gt
-                &lt/tr&gt
-            &lt/table&gt
-        &lt/body&gt
-        &lt/html&gt
-    </pre>
-</div>
+<body>
+    <h1>Welcome to My Website</h1>
+    <p>Visit our <a href="https://www.example.com">website</a> for more information.</p>
+</body>
+Adding More Formatting:
 
+Definition: HTML provides additional formatting tags like <mark> for highlighting text, <del> for deleted text (strikethrough), <ins> for inserted text (underlined), <sub> for subscript, and <sup> for superscript.
 
+Explanation: These tags help in adding emphasis, marking changes, and displaying special text elements.
 
+Example Program:
+
+html
+Copy code
+<body>
+    <h1>Welcome to My Website</h1>
+    <p>This is a <mark>highlighted</mark> text.</p>
+    <p>This is a <del>deleted</del> text and <ins>inserted</ins> text.</p>
+    <p>This is a <sub>subscript</sub> and <sup>superscript</sup> text.</p>
+</body>
+Lists:
+
+Definition: Lists can be represented using the <ul> (unordered list) or <ol> (ordered list) tags. Each list item is defined with the <li> tag.
+
+Explanation: Lists help organize content into bullet points or numbered items for better readability and presentation.
+
+Example Program:
+
+html
+Copy code
+<body>
+    <h2>Unordered List</h2>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <h2>Ordered List</h2>
+    <ol>
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+    </ol>
+</body>
+Tables:
+
+Definition: Tables are created using the <table> tag. The table rows are defined with the <tr> tag, and table headers and data cells are represented by <th> and <td> tags, respectively.
+
+Explanation: Tables are useful for organizing data into rows and columns, making it easier to compare and analyze information.
+
+Example Program:
+
+html
+Copy code
+<body>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>Jane</td>
+            <td>25</td>
+        </tr>
+    </table>
+</body>
 Images:
 
-<p>Definition: Images can be included in a web page using the &ltimg&gt tag. The src attribute specifies the URL of the image, and the alt attribute provides alternative text that is displayed if the image cannot be loaded.</p>
-
-<p>Explanation: Images enhance the visual appeal of a web page and provide additional context to the content.</p>
-
-Example Program:7
 
 
-<pre>
-    &lt!DOCTYPE html&gt
-    &lthtml&gt
-    &lthead&gt
-        &lttitle&gtMy First Web Page&lt/title&gt
-    &lt/head&gt
-    &ltbody&gt
-        &lth2&gtImage Example&lt/h2&gt
-        &ltimg src="image.jpg" alt="Sample Image"&gt
-    &lt/body&gt
+Definition: Images can be included in a web page using the <img> tag. The src attribute specifies the URL of the image, and the alt attribute provides alternative text that is displayed if the image cannot be loaded.
 
-    &lt/html&gt
-</pre>
-<br>
+Explanation: Images enhance the visual appeal of a web page and provide additional context to the content.
+
+Example Program:
+
+html
+Copy code
+<body>
+    <h2>Image Example</h2>
+    <img src="image.jpg" alt="Sample Image">
+</body>
 Multimedia Objects:
 
-<p>Definition: Multimedia objects like videos and audio can be embedded using the &ltvideo&gt and &ltaudio&gt tags, respectively. The controls attribute adds play, pause, and volume controls to the multimedia elements.</p>
+Definition: Multimedia objects like videos and audio can be embedded using the <video> and <audio> tags, respectively. The controls attribute adds play, pause, and volume controls to the multimedia elements.
 
-<p>Explanation: Multimedia elements allow web pages to include videos and audio files, making the content more engaging and interactive.</p>
+Explanation: Multimedia elements allow web pages to include videos and audio files, making the content more engaging and interactive.
 
-Example Program:8
+Example Program:
 
+html
+Copy code
+<body>
+    <h2>Video Example</h2>
+    <video controls>
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
-<pre>
-    &lt!DOCTYPE html&gt
-    &lthtml&gt
-    &lthead&gt
-        &lttitle&gtMy First Web Page&lt/title&gt
-    &lt/head&gt
+    <h2>Audio Example</h2>
+    <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+</body>
 
-    &ltbody&gt
-        &lth2&gtVideo Example&lt/h2&gt
-        &ltvideo controls&gt
-            &ltsource src="video.mp4" type="video/mp4"&gt
-            Your browser does not support the video tag.
-        &lt/video&gt
-    
-        &lth2&gtAudio Example&lt/h2&gt
-        &ltaudio controls&gt
-            &ltsource src="audio.mp3" type="audio/mpeg"&gt
-            Your browser does not support the audio tag.
-        &lt/audio&gt
-    &lt/body&gt
-
-    &lt/html&gt
-</pre>
 Frames:
 
-<p>Definition: Frames allow a web page to be divided into multiple sections, each displaying a separate web page. The &ltframe&gt tag is used to define each individual frame and its content.</p>
+Definition: Frames allow a web page to be divided into multiple sections, each displaying a separate web page. The <frame> tag is used to define each individual frame and its content.
 
-<p>Explanation: Frames allow web developers to split a page into separate sections, each with its own content. However, frames are no longer recommended in modern web development due to their limitations and impact on usability and accessibility.</p>
+Explanation: Frames allow web developers to split a page into separate sections, each with its own content. However, frames are no longer recommended in modern web development due to their limitations and impact on usability and accessibility.
 
-Example Program:9
+Example Program:
 
-
-<pre>
-    &lt!DOCTYPE html&gt
-    &lthtml&gt
-    &lthead&gt
-        &lttitle&gtMy First Web Page&lt/title&gt
-    &lt/head&gt
-
-    &ltbody&gt
-        &lth2&gtFrames Example&lt/h2&gt
-        &ltframe src="frame1.html" name="frame1"&gt
-        &ltframe src="frame2.html" name="frame2"&gt
-    &lt/body&gt
-
-    &lt/html&gt
-</pre>
+html
+Copy code
+<body>
+    <h2>Frames Example</h2>
+    <frame src="frame1.html" name="frame1">
+    <frame src="frame2.html" name="frame2">
+</body>
 Forms:
 
-<p>Definition: Forms are used to collect user input. The &ltform&gt tag is used to create a form, and form elements like &ltinput&gt, &ltselect&gt, and &lttextarea&gt are used to capture user data. The action attribute specifies the URL to which the form data is sent, and the method attribute defines the HTTP method (GET or POST).</p>
+Definition: Forms are used to collect user input. The <form> tag is used to create a form, and form elements like <input>, <select>, and <textarea> are used to capture user data. The action attribute specifies the URL to which the form data is sent, and the method attribute defines the HTTP method (GET or POST).
 
-<p>Explanation: Forms enable users to enter and submit data to web servers. They are widely used for various purposes, such as user registration, login, search, and more.</p>
+Explanation: Forms enable users to enter and submit data to web servers. They are widely used for various purposes, such as user registration, login, search, and more.
 
-Example Program: 10
+Example Program:
 
-
-<pre>
-    &lt!DOCTYPE html&gt
-    &lthtml&gt
-    &lthead&gt
-        &lttitle&gtMy First Web Page&lt/title&gt
-    &lt/head&gt
-
-    &ltbody&gt
-        &lth2&gtForm Example&lt/h2&gt
-        &ltform action="submit.php" method="post"&gt
-            &ltlabel for="name"&gtName:&lt/label&gt
-            &ltinput type="text" id="name" name="name" required&gt&ltbr&gt
-            &ltlabel for="email"&gtEmail:&lt/label&gt
-            &ltinput type="email" id="email" name="email" required&gt&ltbr&gt
-            &ltinput type="submit" value="Submit"&gt
-        &lt/form&gt
-    &lt/body&gt
-
-    &lt/html&gt
-</pre>
+html
+Copy code
+<body>
+    <h2>Form Example</h2>
+    <form action="submit.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+These examples illustrate various HTML elements and how they are used to create web pages with structure, formatting, multimedia, and user input capabilities. Understanding these concepts is essential for building interactive and dynamic web pages using HTML.
 
 
 
