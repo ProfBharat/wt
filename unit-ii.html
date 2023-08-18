@@ -49,55 +49,44 @@
             </p>
             
             <p>Variable : A variable in Php is a container which stores the value like strings, numbers, boolean etc. Every variable is preceded by $ symbol. Variable should start with letter or underscore. following are the valid declarations of variables.</p>
-            
+            <pre>
             $name
             $_name
             $_85name
             $_name85
             
-            
+        </pre>
+        <pre>
             Data types in php:
             
-            Data type
-            Description
-            Example
-            Boolean
-             True or false
-             isfull = true
-            Integer
-             A whole number
-            rank = 12
-            Float
-            floating point numbers
-            marks = 65.7
-            String
-            Collection of characters
-            name = "bharat"
-            array
-            ordered set of keys and values
+            Data type           Description                    Example
+            
+            Boolean             True or false                  isfull = true
+             
+            Integer             A whole number                 rank = 12
+            
+            Float               floating point numbers         marks = 65.7
+    
+            String              Collection of characters       name = "bharat"
+            
+            array               ordered set of keys and values
+            
+            object              an Instance of class
             
             
-            object
-            an Instance of class
+            NULL                Uninitialized variable
             
-            
-            NULL
-            Uninitialized variable
-            
-            
+        </pre>
             
             
             <pre>
-                  Operators
+                        Operators
                   
-                  Type
-                   Operators
-                  Arithmetic
-                   +,  -  ,   * ,  / , %
-                  Relational
-                   < , > , == ,!=,   , <=, >= , ===,!==
-                  Logical
-                  || ,or, xor,&&, and , !
+                  Type          Operators
+
+                  Arithmetic     +,  -  ,   * ,  / , %
+                  Relational     < , > , == ,!=,   , <=, >= , ===,!==
+                  Logical        || ,or, xor,&&, and , !
             </pre>
             
             
@@ -109,7 +98,7 @@
             <p>The value of rank is contant now. we can only  change rank value, by defining it again.</p>
             
             <p>
-                <textarea name="" id="" cols="30" rows="10">
+                <textarea name="" id="" cols="45" rows="10">
                     <?php
                       define("rank","4");
                       echo "You rank is :".rank;
@@ -139,7 +128,7 @@
             
             <p>Example : 	</p>
             
-            <textarea name="" id="" cols="30" rows="10">
+            <textarea name="" id="" cols="45" rows="10">
                   <?php
                   function sayhi()
                   {
@@ -156,7 +145,7 @@
             
             
            
-                <textarea name="" id="" cols="30" rows="10">
+                <textarea name="" id="" cols="45" rows="10">
                      <!-- Php code to print your name -->
                     <?php
                       function printname($name)
@@ -174,7 +163,7 @@
 
      
 
-            <textarea name="" id="" cols="30" rows="10">
+            <textarea name="" id="" cols="45" rows="10">
                 <!-- Create function to add two numbers -->
                 <?php
                 
@@ -203,7 +192,7 @@
             
             
             
-            <textarea name="" id="" cols="30" rows="10">
+            <textarea name="" id="" cols="45" rows="10">
                 <!-- Check the eligibility to vote by verifying the age -->
                 <?php
                 $age = 19;
@@ -220,7 +209,7 @@
             
             
             
-            <textarea name="" id="" cols="30" rows="10">
+            <textarea name="" id="" cols="45" rows="10">
              <!-- Printing 10 natural numbers using the While loop -->
                 <?php
                 $no =1;
@@ -232,7 +221,7 @@
                 ?>
             </textarea>
             
-            <textarea name="" id="" cols="30" rows="10">
+            <textarea name="" id="" cols="45" rows="10">
                 <!-- Printing 10 natural numbers using the Do While loop -->
                 <?php
                 $no =1;
@@ -245,7 +234,7 @@
                 ?>
             </textarea>
             
-            <textarea name="" id="" cols="30" rows="10">
+            <textarea name="" id="" cols="45" rows="10">
                <!-- Printing 10 natural numbers using the for loop -->
                 <?php
                 $no =1;
@@ -269,7 +258,9 @@
             <p>building block of PHP with detailed explanations and example programs:</p>
             
             
-            <p>1. Variables:</p>
+            <b>
+                <p>1. Variables:</p>
+            </b>
             
             
             <p>Definition: Variables are used to store and manipulate data in PHP. They are declared using the $ sign followed by the variable name. PHP is loosely typed, meaning variables can change their data type during runtime.</p>
@@ -284,7 +275,7 @@
             
             
             
-            <textarea name="" id="" cols="30" rows="10">
+            <textarea name="" id="" cols="45" rows="10">
                 <?php
                 $name = "John";
                 $age = 30;
@@ -299,7 +290,9 @@
 
             <br>
 
-            <p>2. Data Types:</p>
+            <b>
+                <p>2. Data Types:</p>
+            </b>
             
             
             <p>
@@ -314,7 +307,7 @@
             
             
             
-            <textarea name="" id="" cols="30" rows="10">
+            <textarea name="" id="" cols="45" rows="10">
                 <?php
                 $integerVar = 42;
                 $floatVar = 3.14;
@@ -335,7 +328,7 @@
 
 
             <p>
-                3. Operators and Expressions:
+                <b>3. Operators and Expressions:</b>
                 
                 
                 Definition: PHP provides a wide range of operators, such as arithmetic, comparison, logical, and assignment operators. Expressions combine variables and values using operators to perform operations.
@@ -349,7 +342,7 @@
             
             
             
-            <textarea name="" id="" cols="50" rows="70">
+            <textarea name="" id="" cols="65" rows="70">
                 <?php
                 $number1 = 10;
                 $number2 = 5;
@@ -395,7 +388,11 @@
             </textarea>
             <br>
 <p>            </p>
-            <p>4. Constants:</p>
+
+
+            <b>
+                <p>4. Constants:</p>
+            </b>
             
             
             <p>Definition: Constants are similar to variables but are defined using the define() function. Once defined, constants cannot be changed or redefined during script execution.</p>
@@ -408,7 +405,7 @@
             
             
            
-            <textarea name="" id="" cols="30" rows="10">
+            <textarea name="" id="" cols="45" rows="10">
                 <?php
                 define("PI", 3.14);
                 define("GREETING", "Hello, World!");
@@ -421,7 +418,9 @@
 
             <br>
 
-            <p>5. Flow Control Functions in PHP:</p>
+            <b>
+                <p>5. Flow Control Functions in PHP:</p>
+            </b>
             
             
             <p>Switching Flow:</p>
@@ -457,7 +456,9 @@
             </p>
 
 
-            <p>Loops:</p>
+            <b>
+                <p>Loops:</p>
+            </b>
             
             
             <p>Definition: PHP supports different types of loops: while, for, do-while, and foreach. Loops are used to execute a block of code repeatedly based on a condition or a collection of elements.</p>
@@ -498,7 +499,9 @@
             </textarea>
 
 <p>            </p>
-            <p>Code Blocks and Browser Output:</p>
+            <b>
+                <p>Code Blocks and Browser Output:</p>
+            </b>
             
             
             <p>Definition: Code blocks in PHP are enclosed within curly braces {}. Output to the browser can be achieved using echo, print, or by directly writing HTML.</p>
@@ -511,7 +514,7 @@
             
             
             
-            <textarea name="" id="" cols="30" rows="10">
+            <textarea name="" id="" cols="45" rows="10">
                 <?php
                 // Code Block
                 if (true) {
@@ -529,7 +532,9 @@
 
 
 
-            <p>6. Working with Functions:</p>
+            <b>
+                <p>6. Working with Functions:</p>
+            </b>
             
             
             <p>Defining Functions:</p>
@@ -545,7 +550,7 @@
             
             
             
-            <textarea name="" id="" cols="30" rows="10">
+            <textarea name="" id="" cols="45" rows="10">
                 <?php
                 function greet() {
                     echo "Hello, PHP Function!";
@@ -560,7 +565,7 @@
 
 <p>            </p>
             <p>
-                Calling Functions:
+                <b>Calling Functions:</b>
                 
             </p>
             
@@ -576,7 +581,7 @@
             
             
             
-            <textarea name="" id="" cols="30" rows="10">
+            <textarea name="" id="" cols="45" rows="10">
                 <?php
                 function add($a, $b) {
                     return $a + $b;
@@ -589,7 +594,9 @@
             </textarea>
 
             
-            <p>Variable Scope:</p>
+            <b>
+                <p>Variable Scope:</p>
+            </b>
             
             
             <p>Definition: PHP supports different variable scopes, including global scope and local scope. Variables declared inside a function are usually local and not accessible outside the function, while global variables can be accessed from any part of the script.</p>
@@ -602,7 +609,7 @@
             
             
             
-            <textarea name="" id="" cols="30" rows="10">
+            <textarea name="" id="" cols="45" rows="10">
                 <?php
                 $globalVar = "I am a global variable.";
                 
@@ -623,7 +630,9 @@
 
 
             <p>
-                <p>Saving State between Function calls with the Static statement:</p>
+                <b>
+                    <p>Saving State between Function calls with the Static statement:</p>
+                </b>
             </p>
             
             
@@ -637,7 +646,7 @@
             
             
             
-            <textarea name="" id="" cols="30" rows="10">
+            <textarea name="" id="" cols="45" rows="10">
                 <?php
                 function increment() {
                     static $count = 0;
@@ -655,7 +664,9 @@
 
 <br>
 
-            <p>More about arguments:</p>
+            <b>
+                <p>More about arguments:</p>
+            </b>
             
             
             <p>
@@ -671,7 +682,7 @@
 
 
             <p>Example Program:</p>
-                <textarea name="" id="" cols="30" rows="10">
+                <textarea name="" id="" cols="45" rows="10">
                     <?php
                     function sum(...$numbers) {
                         $total = 0;
