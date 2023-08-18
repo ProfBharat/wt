@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+
+<html lang="en">
+      <head>
+            <meta charset="UTF-8" />
+            <meta
+                  name="viewport"
+                  content="width=device-width, initial-scale=1.0"
+            />
+            <link rel="stylesheet" href="index.css" />
+            <link
+                  rel="stylesheet"
+                  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            />
+            <link
+                  rel="stylesheet"
+                  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+            />
+
+            <title>Web Design Notes</title>
+      </head>
+
+      <body>
+            
+
+            <!-- Navigation Menu -->
+            <nav>
+                  <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="unit-i.html">Unit-I </a></li>
+                        <li><a href="unit-ii.html">Unit-II</a></li>
+                        <li><a href="unit-iii.html">Unit-III</a></li>
+                        <li><a href="unit-iv.html">Unit-IV</a></li>
+                        <li><a href="unit-v.html">Unit-V</a></li>
+                  </ul>
+            </nav>
+
+            <br />
+            <p>1. Introduction to HTML:</p>
+
+            <p>
+                  Definition: HTML (Hypertext Markup Language) is the standard
+                  markup language used to create and design web pages. It
+                  provides a structured format for presenting content on the
+                  internet. HTML uses various tags to define the structure and
+                  elements of a web page, such as headings, paragraphs, links,
+                  images, and more.
+            </p>
+
+            <p>
+                  Explanation: HTML documents consist of elements enclosed in
+                  tags, which are interpreted by web browsers to display
+                  content. HTML tags are used to format and structure the
+                  content, and they are represented by angle brackets (&lt &gt).
+                  Tags can have attributes that provide additional information
+                  about the elements.
+            </p>
+
+            <p>Example Program:</p>
+
+<textarea name="" id="" cols="50" rows="15">
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>My First Web Page</title>
+    </head>
+    <body>
+        <h1>Hello, World!</h1>
+        <p>This is my first web page created with HTML.</p>
+    </body>
+    </html>
+</textarea>
+
+            <br />
+            <br />
+
+<p>2. Basic HTML:</p>
+
+            <p>
+                  Definition: The basic HTML structure consists of the
+                  &lt!DOCTYPE html&gt declaration, the opening &lthtml&gt tag,
+                  and the closing &lt/html&gt tag. Inside the &lthtml&gt tag,
+                  there are two sections: &lthead&gt and &ltbody&gt. The
+                  &lthead&gt section contains meta-information about the
+                  document, while the &ltbody&gt section contains the visible
+                  content of the web page.
+            </p>
+
+            <p>
+                  Explanation: The &lthead&gt section is used to include
+                  metadata such as the document title, character encoding, CSS
+                  styles, and other elements that are not directly displayed on
+                  the page. The &ltbody&gt section contains the visible content
+                  that users see when they visit the web page.
+            </p>
+
+            <br />
+            <br />
+
+            <p>3. Document Body Text:</p>
+
+            <p>
+                  Definition: In the &ltbody&gt section, we can use various tags
+                  to define headings, paragraphs, and other text elements. HTML
+                  provides tags for different text formatting, such as bold,
+                  italic, underline, and more.
+            </p>
+
+            <p>
+                  Explanation: By using appropriate text-related tags, we can
+                  structure and style the content of the web page for better
+                  readability and visual appeal.
+            </p>
+
+            <p>Example Program:</p>
+
+<textarea name="" id="" cols="30" rows="10">
+    <html>
+    
+        <body>
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <p>This is a paragraph.</p>
+            <p>This is another paragraph.</p>
+            <strong>This text is bold.</strong>
+            <em>This text is italic.</em>
+        </body>
+        </html>
+</textarea>
+
+            <br />
+            <br />
+
+<p>4. Hyperlinks:</p>
+
+            <p>
+                  Definition: Hyperlinks are created using the &lta&gt tag with
+                  the href attribute, which specifies the URL of the link
+                  destination. Users can click on the link to navigate to the
+                  linked web page.
+            </p>
+
+            <p>
+                  Explanation: Hyperlinks are an essential feature of the web,
+                  enabling users to navigate between different web pages and
+                  websites easily.
+            </p>
+
+            <p>Example Program:</p>
+
+ <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+            >
+    <html>
+    <body>
+        <h1>Welcome to My Website</h1>
+        <p>Visit our <a href="https://www.example.com">website</a> for more information.</p>
+    </body>
+    
+    </html>
+</textarea
+            >
+
+            <br />
+            <br />
+
+<p>5. Adding More Formatting:</p>
+
+            <p>
+                  Definition: HTML provides additional formatting tags like
+                  &ltmark&gt for highlighting text, &ltdel&gt for deleted text
+                  (strikethrough), &ltins&gt for inserted text (underlined),
+                  &ltsub&gt for subscript, and &ltsup&gt for superscript.
+            </p>
+
+            <p>
+                  Explanation: These tags help in adding emphasis, marking
+                  changes, and displaying special text elements.
+            </p>
+
+            <p>Example Program:</p>
+
+            <textarea name="" id="" cols="30" rows="10">
+                  <html>
+                        <body>
+                              <h1>Welcome to My Website</h1>
+                              <p>This is a <mark>highlighted</mark> text.</p>
+                              <p>
+                                    This is a <del>deleted</del> text and
+                                    <ins>inserted</ins> text.
+                              </p>
+                              <p>
+                                    This is a <sub>subscript</sub> and
+                                    <sup>superscript</sup> text.
+                              </p>
+                        </body>
+                  </html>
+            </textarea>
+
+            <br /><br />
+
+<p>6. Lists:</p>
+
+            <p>
+                  Definition: Lists can be represented using the &ltul&gt
+                  (unordered list) or &ltol&gt (ordered list) tags. Each list
+                  item is defined with the &ltli&gt tag.
+            </p>
+
+            <p>
+                  Explanation: Lists help organize content into bullet points or
+                  numbered items for better readability and presentation.
+            </p>
+
+            <p>Example Program:</p>
+
+<p>7. Tables:</p>
+
+            <p>
+                  Definition: Tables are created using the &lttable&gt tag. The
+                  table rows are defined with the &lttr&gt tag, and table
+                  headers and data cells are represented by &ltth&gt and
+                  &lttd&gt tags, respectively.
+            </p>
+
+            <p>
+                  Explanation: Tables are useful for organizing data into rows
+                  and columns, making it easier to compare and analyze
+                  information.
+            </p>
+
+            <p>Example Program:</p>
+
+            <textarea name="" id="" cols="30" rows="10">
+                  <table>
+                        <tr>
+                              <th>Name</th>
+                              <th>Age</th>
+                        </tr>
+                        <tr>
+                              <td>John</td>
+                              <td>30</td>
+                        </tr>
+                        <tr>
+                              <td>Jane</td>
+                              <td>25</td>
+                        </tr>
+                  </table>
+            </textarea>
+
+            <br />
+
+            <h1>very good bharat</h1>
+            <br />
+
+<p>8. Images:</p>
+
+            <p>
+                  Definition: Images can be included in a web page using the
+                   tag. The src attribute specifies the URL of the
+                  image, and the alt attribute provides alternative text that is
+                  displayed if the image cannot be loaded.
+            </p>
+
+            <p>
+                  Explanation: Images enhance the visual appeal of a web page
+                  and provide additional context to the content.
+            </p>
+
+            <p>Example Program:</p>
+
+<textarea name="" id="" cols="30" rows="10">
+    <html>
+    <body>
+        <h2>Image Example</h2>
+        <img src="image.jpg" alt="Sample Image">
+    </body>
+    </html>
+</textarea>
+
+            <br />
+            <br />
+
+            <p>9. Multimedia Objects:</p>
+
+            <p>
+                  Definition: Multimedia objects like videos and audio can be
+                  embedded using the &ltvideo&gt and &ltaudio&gt tags,
+                  respectively. The controls attribute adds play, pause, and
+                  volume controls to the multimedia elements.
+            </p>
+
+            <p>
+                  Explanation: Multimedia elements allow web pages to include
+                  videos and audio files, making the content more engaging and
+                  interactive.
+            </p>
+
+            <p>Example Program:</p>
+
+<textarea name="" id="" cols="50" rows="25">
+    <html>
+    <body>
+        <h2>Video Example</h2>
+        <video controls>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    
+        <h2>Audio Example</h2>
+        <audio controls>
+            <source src="audio.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+        </audio>
+    </body>
+    </html>
+</textarea>
+
+            <br />
+            <br />
+
+<p>10. Frames:</p>
+
+            <p>
+                  Definition: Frames allow a web page to be divided into
+                  multiple sections, each displaying a separate web page. The
+                  &ltframe&gt tag is used to define each individual frame and
+                  its content.
+            </p>
+
+            <p>
+                  Explanation: Frames allow web developers to split a page into
+                  separate sections, each with its own content. However, frames
+                  are no longer recommended in modern web development due to
+                  their limitations and impact on usability and accessibility.
+            </p>
+
+            Example Program:
+
+<textarea name="" id="" cols="30" rows="10">
+    <html>
+    <body>
+        <h2>Frames Example</h2>
+        <frame src="unit-iii.html" name="frame1">
+        <frame src="unit-iv.html" name="frame2">
+    </body>
+    </html>
+</textarea>
+
+            <br>
+            <br> 
+
+
+
+<p>11. Forms:</p>
+
+            <p>
+                  Definition: Forms are used to collect user input. The
+                  &ltform&gt tag is used to create a form, and form elements
+                  like &ltinput&gt, &ltselect&gt, and &lttextarea&gt are used to
+                  capture user data. The action attribute specifies the URL to
+                  which the form data is sent, and the method attribute defines
+                  the HTTP method (GET or POST).
+            </p>
+
+            <p>
+                  Explanation: Forms enable users to enter and submit data to
+                  web servers. They are widely used for various purposes, such
+                  as user registration, login, search, and more.
+            </p>
+
+            <p>Example Program:</p>
+
+<textarea name="" id="" cols="60" rows="15">
+    <html>
+    <body>
+        <h2>Form Example</h2>
+        <form action="submit.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+    </html>
+</textarea>
+
+            <script src="./runcode.js"></script>
+      </body>
+</html>
+
+
+
+
+
+<textarea name="" id="" cols="50" rows="30">
+      
+          <h2>Unordered List</h2>
+          <ul>
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+          </ul>
+      
+          <h2>Ordered List</h2>
+          <ol>
+              <li>First</li>
+              <li>Second</li>
+              <li>Third</li>
+          </ol>
+      
+  </textarea>

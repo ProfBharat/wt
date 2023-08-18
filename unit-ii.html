@@ -10,7 +10,7 @@
             <title>WD  Notes</title>
       </head>
       <body>
-            <!-- Navigation Menu -->
+           <!-- Navigation Menu -->
             <nav>
                   <ul>
                         <li><a href="index.html">Home</a></li>
@@ -18,7 +18,7 @@
                         <li><a href="unit-ii.html">Unit-II</a></li>
                         <li><a href="unit-iii.html">Unit-III</a></li>
                         <li><a href="unit-iv.html">Unit-IV</a></li>
-                        <li><a href="unit-v.html">Unit-V: Deadlocks</a></li>
+                        <li><a href="unit-v.html">Unit-V </a></li>
                   </ul>
             </nav>
 
@@ -27,23 +27,28 @@
                   Unit II Web Design
                   instructor : Bharat Kumar
             </h1>
-            Unit II Web Design
-            instructor : Bharat Kumar
-             Building blocks of PHP:
-            Variables, Data Types, Operators and Expressions, Constants. Flow Control Functions in
-            PHP: Switching Flow, Loops, Code Blocks and Browser Output. Working with Functions:
-            Defining Functions, Calling functions, returning the values from User Defined Functions,
-            Variable Scope, Saving State between Function calls with the Static statement, more about arguments..
+            
+            <p>
+                <p>Building blocks of PHP:</p>
+            </p>
+            <p>
+                Variables, Data Types, Operators and Expressions, Constants. Flow Control Functions in
+                PHP: Switching Flow, Loops, Code Blocks and Browser Output. Working with Functions:
+                Defining Functions, Calling functions, returning the values from User Defined Functions,
+                Variable Scope, Saving State between Function calls with the Static statement, more about arguments..
+            </p>
             
             
             
-            Install php using xampp.
-            configure it vscode.
-            for mac os,apache server is not mandatory, use command as brew install php
-            output: http://localhost/ex.php (we can open in some web browser)
-            ex.php is the file name.
+            <p>Install php using xampp.</p>
+            <p>
+                configure it vscode.
+                for mac os,apache server is not mandatory, use command as brew install php
+                output: http://localhost/ex.php (we can open in some web browser)
+                ex.php is the file name.
+            </p>
             
-            Variable : A variable in Php is a container which stores the value like strings, numbers, boolean etc. Every variable is preceded by $ symbol. Variable should start with letter or underscore. following are the valid declarations of variables.
+            <p>Variable : A variable in Php is a container which stores the value like strings, numbers, boolean etc. Every variable is preceded by $ symbol. Variable should start with letter or underscore. following are the valid declarations of variables.</p>
             
             $name
             $_name
@@ -82,542 +87,604 @@
             
             
             
-            Operators
-            
-            Type
-             Operators
-            Arithmetic
-             +,  -  ,   * ,  / , %
-            Relational
-             < , > , == ,!=,   , <=, >= , ===,!==
-            Logical
-            || ,or, xor,&&, and , !
-            
-            
-            
-            Constants: For variables we can change the value of the variable anytime when we needed. if you do not want to change that value , we can define that value as constant using define() built in function.
-            
-            define("rank", "4");
-            
-            The value of rank is contant now. we can only  change rank value, by defining it again.
-            
-            <?php
-              define("rank","4");
-              echo "You rank is :".rank;
-            ?>
-            
-            
-            
-            Note: dot . is the concatenation operator
-            
-            
-            .
-            Functions
-            
-            syntax :   function function_name($argument1, $argument2)
-                        {
-            //function code
-            }
-            
-            
-            
-            
-            Example : 	<?php
-            function sayhi()
-            {
-                        echo "<h1> Hi Bharat <h1>";
-            }
-            sayhi();
-            ?>
-            
-            
-            <!-- Php code to print your name -->
-            
-            :
-            <?php
-              function printname($name)
-              {
-               echo $name."<br>";
-              }
-              printname("Bharat");
-              printname("Kumar");
-            ?>
-            
-            
-            <!-- Create function to add two numbers -->
-            <?php
-            
-            
-              function add($no_1, $no_2)
-              {
-                  echo $result = $no_1 + $no_2;
-                  return $result;   
-              }
-               add(10,20);
-              
-            ?>
-            
-            
-            
-            
-            if, else, while , do while, for 
-            
-            
-            
-            <!-- Check the eligibility to vote by verifying the age -->
-            
-            
-            
-            
-            <?php
-            $age = 19;
-            if($age >=18)
-            {
-                echo "You are eligible to Vote";
-            }
-            else
-            {
-              echo "You are not eligible to vote";
-            }
-            ?>
-            
-            
-            
-            <!-- Printing 10 natural numbers using the While loop -->
-            <?php
-            $no =1;
-            while($no <=10)
-            {
-                echo $no;
-                $no = $no + 1;
-            }
-            ?>
-            
-            <!-- Printing 10 natural numbers using the Do While loop -->
-            <?php
-            $no =1;
-            do
-            {
-                echo  $no;
-                echo ",";
-                $no = $no + 1;
-            }while($no <=10)
-            ?>
-            
-            <!-- Printing 10 natural numbers using the for loop -->
-            <?php
-            $no =1;
-            for($no = 1;$no<=10;$no++)
-            {
-                echo $no.",";
-            }
-            ?>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            building block of PHP with detailed explanations and example programs:
-            
-            
-            1. Variables:
-            
-            
-            Definition: Variables are used to store and manipulate data in PHP. They are declared using the $ sign followed by the variable name. PHP is loosely typed, meaning variables can change their data type during runtime.
-            
-            
-            Explanation: Variables act as containers that hold values. They can store various types of data, such as integers, strings, arrays, and more. Variables must be declared before they are used.
-            
-            
-            Example Program:
-            
-            
-            php
-            Copy code
-            <?php
-            $name = "John";
-            $age = 30;
-            $height = 5.9;
-            
-            
-            echo "Name: " . $name . "\n"; // Output: Name: John
-            echo "Age: " . $age . "\n";   // Output: Age: 30
-            echo "Height: " . $height;    // Output: Height: 5.9
-            ?>
-            2. Data Types:
-            
-            
-            Definition: PHP supports various data types, including integers, floats, strings, booleans, arrays, objects, and NULL. The data type of a variable is automatically determined based on the assigned value.
-            
-            
-            Explanation: Data types define the kind of data that a variable can hold. PHP automatically converts data between types as needed.
-            
-            
-            Example Program:
-            
-            
-            php
-            Copy code
-            <?php
-            $integerVar = 42;
-            $floatVar = 3.14;
-            $stringVar = "Hello";
-            $booleanVar = true;
-            $arrayVar = array(1, 2, 3);
-            $nullVar = null;
-            
-            
-            echo gettype($integerVar) . "\n"; // Output: integer
-            echo gettype($floatVar) . "\n";   // Output: double
-            echo gettype($stringVar) . "\n";  // Output: string
-            echo gettype($booleanVar) . "\n"; // Output: boolean
-            echo gettype($arrayVar) . "\n";   // Output: array
-            echo gettype($nullVar);           // Output: NULL
-            ?>
-            3. Operators and Expressions:
-            
-            
-            Definition: PHP provides a wide range of operators, such as arithmetic, comparison, logical, and assignment operators. Expressions combine variables and values using operators to perform operations.
-            
-            
-            Explanation: Operators allow us to perform various computations and comparisons in PHP. Expressions are combinations of variables, values, and operators, and they evaluate to a result.
-            
-            
-            Example Program:
-            
-            
-            php
-            Copy code
-            <?php
-            $number1 = 10;
-            $number2 = 5;
-            
-            
-            // Arithmetic Operators
-            $resultAdd = $number1 + $number2; // 10 + 5 = 15
-            $resultSub = $number1 - $number2; // 10 - 5 = 5
-            $resultMul = $number1 * $number2; // 10 * 5 = 50
-            $resultDiv = $number1 / $number2; // 10 / 5 = 2
-            
-            
-            // Comparison Operators
-            $isGreater = ($number1 > $number2); // true
-            $isEqual = ($number1 == $number2); // false
-            
-            
-            // Logical Operators
-            $isTrue = true;
-            $isFalse = false;
-            $resultAnd = $isTrue && $isFalse; // false
-            $resultOr = $isTrue || $isFalse; // true
-            $resultNot = !$isTrue; // false
-            
-            
-            // Concatenation Operator
-            $text1 = "Hello, ";
-            $text2 = "PHP!";
-            $concatenatedText = $text1 . $text2; // "Hello, PHP!"
-            
-            
-            echo $resultAdd . "\n"; // Output: 15
-            echo $resultSub . "\n"; // Output: 5
-            echo $resultMul . "\n"; // Output: 50
-            echo $resultDiv . "\n"; // Output: 2
-            echo $isGreater . "\n"; // Output: 1 (true is converted to 1 in echo)
-            echo $isEqual . "\n";   // Output: (empty, false is converted to empty in echo)
-            echo $resultAnd . "\n"; // Output: (empty, false is converted to empty in echo)
-            echo $resultOr . "\n";  // Output: 1 (true is converted to 1 in echo)
-            echo $resultNot . "\n"; // Output: (empty, false is converted to empty in echo)
-            echo $concatenatedText; // Output: Hello, PHP!
-            ?>
-            4. Constants:
-            
-            
-            Definition: Constants are similar to variables but are defined using the define() function. Once defined, constants cannot be changed or redefined during script execution.
-            
-            
-            Explanation: Constants hold values that remain constant throughout the execution of the script. They provide a way to define and use fixed values that do not change during the program's execution.
-            
-            
-            Example Program:
-            
-            
-            php
-            Copy code
-            <?php
-            define("PI", 3.14);
-            define("GREETING", "Hello, World!");
-            
-            
-            echo PI . "\n";       // Output: 3.14
-            echo GREETING . "\n"; // Output: Hello, World!
-            ?>
-            5. Flow Control Functions in PHP:
-            
-            
-            Switching Flow:
-            
-            
-            Definition: The switch statement is used to select one of many blocks of code to be executed based on the value of an expression. It is a cleaner alternative to multiple nested if-else statements.
-            
-            
-            Explanation: The switch statement evaluates the expression once and then compares it with the values of each case. If a match is found, the corresponding block of code is executed.
-            
-            
-            Example Program:
-            
-            
-            php
-            Copy code
-            <?php
-            $day = "Monday";
-            
-            
-            switch ($day) {
-                case "Monday":
-                    echo "It's Monday!";
-                    break;
-                case "Tuesday":
-                    echo "It's Tuesday!";
-                    break;
-                default:
-                    echo "It's another day!";
-            }
-            // Output: It's Monday!
-            ?>
-            Loops:
-            
-            
-            Definition: PHP supports different types of loops: while, for, do-while, and foreach. Loops are used to execute a block of code repeatedly based on a condition or a collection of elements.
-            
-            
-            Explanation: Loops are essential for repetitive tasks, and they allow us to perform actions multiple times without duplicating code.
-            
-            
-            Example Program:
-            
-            
-            php
-            Copy code
-            <?php
-            // While Loop
-            $i = 1;
-            while ($i <= 5) {
-                echo $i . " ";
-                $i++;
-            }
-            // Output: 1 2 3 4 5
-            
-            
-            // For Loop
-            for ($j = 1; $j <= 5; $j++) {
-                echo $j . " ";
-            }
-            // Output: 1 2 3 4 5
-            
-            
-            // Foreach Loop
-            $colors = array("Red", "Green", "Blue");
-            foreach ($colors as $color) {
-                echo $color . " ";
-            }
-            // Output: Red Green Blue
-            ?>
-            Code Blocks and Browser Output:
-            
-            
-            Definition: Code blocks in PHP are enclosed within curly braces {}. Output to the browser can be achieved using echo, print, or by directly writing HTML.
-            
-            
-            Explanation: Code blocks allow us to group multiple statements together. Browser output can be used to display dynamic content on a webpage.
-            
-            
-            Example Program:
-            
-            
-            php
-            Copy code
-            <?php
-            // Code Block
-            if (true) {
-                echo "This is inside the code block.";
-            }
-            
-            
-            // Browser Output
-            echo "<h1>Hello, PHP!</h1>";
-            echo "<p>Welcome to PHP programming.</p>";
-            ?>
-            6. Working with Functions:
-            
-            
-            Defining Functions:
-            
-            
-            Definition: Functions in PHP are defined using the function keyword followed by the function name and a pair of parentheses. The code to be executed is enclosed within curly braces.
-            
-            
-            Explanation: Functions allow us to break down complex tasks into smaller, manageable parts. They promote reusability and modularity in code.
-            
-            
-            Example Program:
-            
-            
-            php
-            Copy code
-            <?php
-            function greet() {
-                echo "Hello, PHP Function!";
-            }
-            
-            
-            greet(); // Output: Hello, PHP Function!
-            ?>
-            Calling Functions:
-            
-            
-            Definition: Once a function is defined, it can be called by using its name followed by parentheses.
-            
-            
-            Explanation: Function calls execute the code inside the function, allowing us to reuse the same logic at different points in the program.
-            
-            
-            Example Program:
-            
-            
-            php
-            Copy code
-            <?php
-            function add($a, $b) {
-                return $a + $b;
-            }
-            
-            
-            $result = add(10, 5);
-            echo $result; // Output: 15
-            ?>
-            Variable Scope:
-            
-            
-            Definition: PHP supports different variable scopes, including global scope and local scope. Variables declared inside a function are usually local and not accessible outside the function, while global variables can be accessed from any part of the script.
-            
-            
-            Explanation: Variable scope defines where a variable is accessible in the code. Local variables are only accessible within the function they are declared in, while global variables can be accessed from anywhere in the script.
-            
-            
-            Example Program:
-            
-            
-            php
-            Copy code
-            <?php
-            $globalVar = "I am a global variable.";
-            
-            
-            function testScope() {
-                global $globalVar;
-                $localVar = "I am a local variable.";
-                echo $globalVar . "\n"; // Output: I am a global variable.
-                echo $localVar . "\n";  // Output: I am a local variable.
-            }
-            
-            
-            testScope();
-            ?>
-            Saving State between Function calls with the Static statement:
-            
-            
-            Definition: The static keyword is used to declare a variable with static scope. It retains its value between function calls, allowing for persistent state across calls.
-            
-            
-            Explanation: The static keyword preserves the value of a variable between function calls. It allows a variable to retain its state even after the function finishes execution.
-            
-            
-            Example Program:
-            
-            
-            php
-            Copy code
-            <?php
-            function increment() {
-                static $count = 0;
-                $count++;
-                echo "Count: " . $count . "\n";
-            }
-            
-            
-            increment(); // Output: Count: 1
-            increment(); // Output: Count: 2
-            increment(); // Output: Count: 3
-            ?>
-            More about arguments:
-            
-            
-            Definition: Functions can accept arguments passed in the parentheses when the function is called. Arguments can be used as input to the function's logic and can be of any data type.
-            
-            
-            Explanation: Function arguments allow us to pass data into a function for processing. They enable us to customize the behavior of a function based on different inputs.
-            
-            
-            Example Program:
-            
-            
-            php
-            Copy code
-            <?php
-            function sum(...$numbers) {
-                $total = 0;
-                foreach ($numbers as $num) {
-                    $total += $num;
+            <pre>
+                  Operators
+                  
+                  Type
+                   Operators
+                  Arithmetic
+                   +,  -  ,   * ,  / , %
+                  Relational
+                   < , > , == ,!=,   , <=, >= , ===,!==
+                  Logical
+                  || ,or, xor,&&, and , !
+            </pre>
+            
+            
+            
+            <p>Constants: For variables we can change the value of the variable anytime when we needed. if you do not want to change that value , we can define that value as constant using define() built in function.</p>
+            
+            <p>define("rank", "4");</p>
+            
+            <p>The value of rank is contant now. we can only  change rank value, by defining it again.</p>
+            
+            <p>
+                <textarea name="" id="" cols="30" rows="10">
+                    <?php
+                      define("rank","4");
+                      echo "You rank is :".rank;
+                    ?>
+                </textarea>
+            <p></p></p>
+            
+            
+            
+            <p>
+                Note: dot . is the concatenation operator
+                
+            </p>
+            
+            <p>.</p>
+            <pre>
+                Functions
+                
+                syntax :   function function_name($argument1, $argument2)
+                            {
+                //function code
                 }
-                return $total;
-            }
-            
-            
-            echo sum(1, 2, 3);        // Output: 6
-            echo sum(10, 20, 30, 40); // Output: 100
-            ?>
-            These examples provide a comprehensive overview of the building blocks of PHP, including variables, data types, operators, constants, flow control functions (switch, loops), working with functions (defining, calling, returning values, variable scope, static statement), and handling function arguments. Understanding these fundamental concepts is crucial for developing robust and efficient PHP programs.
+                
+            </pre>
             
             
             
+            <p>Example : 	</p>
+            
+            <textarea name="" id="" cols="30" rows="10">
+                  <?php
+                  function sayhi()
+                  {
+                              echo "<h1> Hi Bharat <h1>";
+                  }
+                  sayhi();
+                  ?>
+            </textarea>
+            
+            <br>
+
+            
+           
+            
+            
+           
+                <textarea name="" id="" cols="30" rows="10">
+                     <!-- Php code to print your name -->
+                    <?php
+                      function printname($name)
+                      {
+                       echo $name."<br>";
+                      }
+                      printname("Bharat");
+                      printname("Kumar");
+                    ?>
+                </textarea>
+           
+            
+            
+                <br>
+
+     
+
+            <textarea name="" id="" cols="30" rows="10">
+                <!-- Create function to add two numbers -->
+                <?php
+                
+                
+                  function add($no_1, $no_2)
+                  {
+                      echo $result = $no_1 + $no_2;
+                      return $result;
+                  }
+                   add(10,20);
+                
+                ?>
+            </textarea>
+            
+            
+
+
+            
+            
+            <p>if, else, while , do while, for </p>
+            
+            
+            
+            <p></p>
+            
+            
+            
+            
+            <textarea name="" id="" cols="30" rows="10">
+                <!-- Check the eligibility to vote by verifying the age -->
+                <?php
+                $age = 19;
+                if($age >=18)
+                {
+                    echo "You are eligible to Vote";
+                }
+                else
+                {
+                  echo "You are not eligible to vote";
+                }
+                ?>
+            </textarea>
+            
+            
+            
+            <textarea name="" id="" cols="30" rows="10">
+             <!-- Printing 10 natural numbers using the While loop -->
+                <?php
+                $no =1;
+                while($no <=10)
+                {
+                    echo $no;
+                    $no = $no + 1;
+                }
+                ?>
+            </textarea>
+            
+            <textarea name="" id="" cols="30" rows="10">
+                <!-- Printing 10 natural numbers using the Do While loop -->
+                <?php
+                $no =1;
+                do
+                {
+                    echo  $no;
+                    echo ",";
+                    $no = $no + 1;
+                }while($no <=10)
+                ?>
+            </textarea>
+            
+            <textarea name="" id="" cols="30" rows="10">
+               <!-- Printing 10 natural numbers using the for loop -->
+                <?php
+                $no =1;
+                for($no = 1;$no<=10;$no++)
+                {
+                    echo $no.",";
+                }
+                ?>
+            </textarea>
             
             
             
             
             
             
-                        
-                        
+            
+            
+            
+            
+            
+            <p>building block of PHP with detailed explanations and example programs:</p>
+            
+            
+            <p>1. Variables:</p>
+            
+            
+            <p>Definition: Variables are used to store and manipulate data in PHP. They are declared using the $ sign followed by the variable name. PHP is loosely typed, meaning variables can change their data type during runtime.</p>
+            
+            
+            <p>
+                Explanation: Variables act as containers that hold values. They can store various types of data, such as integers, strings, arrays, and more. Variables must be declared before they are used.
+                
+            </p>
+            
+            <p>Example Program:</p>
+            
+            
+            
+            <textarea name="" id="" cols="30" rows="10">
+                <?php
+                $name = "John";
+                $age = 30;
+                $height = 5.9;
+                
+                
+                echo "Name: " . $name . "\n"; // Output: Name: John
+                echo "Age: " . $age . "\n";   // Output: Age: 30
+                echo "Height: " . $height;    // Output: Height: 5.9
+                ?>
+            </textarea>
+
+            <br>
+
+            <p>2. Data Types:</p>
+            
+            
+            <p>
+                Definition: PHP supports various data types, including integers, floats, strings, booleans, arrays, objects, and NULL. The data type of a variable is automatically determined based on the assigned value.
+                
+            </p>
+            
+            <p>Explanation: Data types define the kind of data that a variable can hold. PHP automatically converts data between types as needed.</p>
+            
+            
+            <p>Example Program:</p>
+            
+            
+            
+            <textarea name="" id="" cols="30" rows="10">
+                <?php
+                $integerVar = 42;
+                $floatVar = 3.14;
+                $stringVar = "Hello";
+                $booleanVar = true;
+                $arrayVar = array(1, 2, 3);
+                $nullVar = null;
+                
+                
+                echo gettype($integerVar) . "\n"; // Output: integer
+                echo gettype($floatVar) . "\n";   // Output: double
+                echo gettype($stringVar) . "\n";  // Output: string
+                echo gettype($booleanVar) . "\n"; // Output: boolean
+                echo gettype($arrayVar) . "\n";   // Output: array
+                echo gettype($nullVar);           // Output: NULL
+                ?>
+            </textarea>
+
+
+            <p>
+                3. Operators and Expressions:
+                
+                
+                Definition: PHP provides a wide range of operators, such as arithmetic, comparison, logical, and assignment operators. Expressions combine variables and values using operators to perform operations.
+            </p>
+            
+            
+            <p>Explanation: Operators allow us to perform various computations and comparisons in PHP. Expressions are combinations of variables, values, and operators, and they evaluate to a result.</p>
+            
+            
+            <p>Example Program:</p>
+            
+            
+            
+            <textarea name="" id="" cols="50" rows="70">
+                <?php
+                $number1 = 10;
+                $number2 = 5;
+                
+                
+                // Arithmetic Operators
+                $resultAdd = $number1 + $number2; // 10 + 5 = 15
+                $resultSub = $number1 - $number2; // 10 - 5 = 5
+                $resultMul = $number1 * $number2; // 10 * 5 = 50
+                $resultDiv = $number1 / $number2; // 10 / 5 = 2
+                
+                
+                // Comparison Operators
+                $isGreater = ($number1 > $number2); // true
+                $isEqual = ($number1 == $number2); // false
+                
+                
+                // Logical Operators
+                $isTrue = true;
+                $isFalse = false;
+                $resultAnd = $isTrue && $isFalse; // false
+                $resultOr = $isTrue || $isFalse; // true
+                $resultNot = !$isTrue; // false
+                
+                
+                // Concatenation Operator
+                $text1 = "Hello, ";
+                $text2 = "PHP!";
+                $concatenatedText = $text1 . $text2; // "Hello, PHP!"
+                
+                
+                echo $resultAdd . "\n"; // Output: 15
+                echo $resultSub . "\n"; // Output: 5
+                echo $resultMul . "\n"; // Output: 50
+                echo $resultDiv . "\n"; // Output: 2
+                echo $isGreater . "\n"; // Output: 1 (true is converted to 1 in echo)
+                echo $isEqual . "\n";   // Output: (empty, false is converted to empty in echo)
+                echo $resultAnd . "\n"; // Output: (empty, false is converted to empty in echo)
+                echo $resultOr . "\n";  // Output: 1 (true is converted to 1 in echo)
+                echo $resultNot . "\n"; // Output: (empty, false is converted to empty in echo)
+                echo $concatenatedText; // Output: Hello, PHP!
+                ?>
+            </textarea>
+            <br>
+<p>            </p>
+            <p>4. Constants:</p>
+            
+            
+            <p>Definition: Constants are similar to variables but are defined using the define() function. Once defined, constants cannot be changed or redefined during script execution.</p>
+            
+            
+            <p>Explanation: Constants hold values that remain constant throughout the execution of the script. They provide a way to define and use fixed values that do not change during the program's execution.</p>
+            
+            
+            <p>Example Program:</p>
+            
+            
+           
+            <textarea name="" id="" cols="30" rows="10">
+                <?php
+                define("PI", 3.14);
+                define("GREETING", "Hello, World!");
+                
+                
+                echo PI . "\n";       // Output: 3.14
+                echo GREETING . "\n"; // Output: Hello, World!
+                ?>
+            </textarea>
+
+            <br>
+
+            <p>5. Flow Control Functions in PHP:</p>
+            
+            
+            <p>Switching Flow:</p>
+            
+            
+            <p>Definition: The switch statement is used to select one of many blocks of code to be executed based on the value of an expression. It is a cleaner alternative to multiple nested if-else statements.</p>
+            
+            
+            <p>Explanation: The switch statement evaluates the expression once and then compares it with the values of each case. If a match is found, the corresponding block of code is executed.</p>
+            
+            
+            <p>Example Program:</p>
+            
+            
+            
+            <p>
+                <?php
+                $day = "Monday";
+                
+                
+                switch ($day) {
+                    case "Monday":
+                        echo "It's Monday!";
+                        break;
+                    case "Tuesday":
+                        echo "It's Tuesday!";
+                        break;
+                    default:
+                        echo "It's another day!";
+                }
+                // Output: It's Monday!
+                ?>
+            </p>
+
+
+            <p>Loops:</p>
+            
+            
+            <p>Definition: PHP supports different types of loops: while, for, do-while, and foreach. Loops are used to execute a block of code repeatedly based on a condition or a collection of elements.</p>
+            
+            
+            <p>Explanation: Loops are essential for repetitive tasks, and they allow us to perform actions multiple times without duplicating code</p>.
+            
+            
+            <p>Example Program:</p>
+            
+            
+            
+            <textarea name="" id="" cols="50" rows="50">
+                <?php
+                // While Loop
+                $i = 1;
+                while ($i <= 5) {
+                    echo $i . " ";
+                    $i++;
+                }
+                // Output: 1 2 3 4 5
+                
+                
+                // For Loop
+                for ($j = 1; $j <= 5; $j++) {
+                    echo $j . " ";
+                }
+                // Output: 1 2 3 4 5
+                
+                
+                // Foreach Loop
+                $colors = array("Red", "Green", "Blue");
+                foreach ($colors as $color) {
+                    echo $color . " ";
+                }
+                // Output: Red Green Blue
+                ?>
+            </textarea>
+
+<p>            </p>
+            <p>Code Blocks and Browser Output:</p>
+            
+            
+            <p>Definition: Code blocks in PHP are enclosed within curly braces {}. Output to the browser can be achieved using echo, print, or by directly writing HTML.</p>
+            
+            
+            <p>Explanation: Code blocks allow us to group multiple statements together. Browser output can be used to display dynamic content on a webpage.</p>
+            
+            
+            <p>Example Program:</p>
+            
+            
+            
+            <textarea name="" id="" cols="30" rows="10">
+                <?php
+                // Code Block
+                if (true) {
+                    echo "This is inside the code block.";
+                }
+                
+                
+                // Browser Output
+                echo "<h1>Hello, PHP!</h1>";
+                echo "<p>Welcome to PHP programming.</p>";
+                ?>
+            </textarea>
+
+<p>            </p>
+
+
+
+            <p>6. Working with Functions:</p>
+            
+            
+            <p>Defining Functions:</p>
+            
+            
+            <p>Definition: Functions in PHP are defined using the function keyword followed by the function name and a pair of parentheses. The code to be executed is enclosed within curly braces.</p>
+            
+            
+            <p>Explanation: Functions allow us to break down complex tasks into smaller, manageable parts. They promote reusability and modularity in code.</p>
+            
+            
+            <p>Example Program:</p>
+            
+            
+            
+            <textarea name="" id="" cols="30" rows="10">
+                <?php
+                function greet() {
+                    echo "Hello, PHP Function!";
+                }
+                
+                
+                greet(); // Output: Hello, PHP Function!
+                ?>
+            </textarea>
+
+
+
+<p>            </p>
+            <p>
+                Calling Functions:
+                
+            </p>
+            
+            <p>
+                Definition: Once a function is defined, it can be called by using its name followed by parentheses.
+                
+            </p>
+            
+            <p>Explanation: Function calls execute the code inside the function, allowing us to reuse the same logic at different points in the program.</p>
+            
+            
+            <p>Example Program:</p>
+            
+            
+            
+            <textarea name="" id="" cols="30" rows="10">
+                <?php
+                function add($a, $b) {
+                    return $a + $b;
+                }
+                
+                
+                $result = add(10, 5);
+                echo $result; // Output: 15
+                ?>
+            </textarea>
+
+            
+            <p>Variable Scope:</p>
+            
+            
+            <p>Definition: PHP supports different variable scopes, including global scope and local scope. Variables declared inside a function are usually local and not accessible outside the function, while global variables can be accessed from any part of the script.</p>
+            
+            
+            <p>Explanation: Variable scope defines where a variable is accessible in the code. Local variables are only accessible within the function they are declared in, while global variables can be accessed from anywhere in the script.</p>
+            
+            
+            <p>Example Program:</p>
+            
+            
+            
+            <textarea name="" id="" cols="30" rows="10">
+                <?php
+                $globalVar = "I am a global variable.";
+                
+                
+                function testScope() {
+                    global $globalVar;
+                    $localVar = "I am a local variable.";
+                    echo $globalVar . "\n"; // Output: I am a global variable.
+                    echo $localVar . "\n";  // Output: I am a local variable.
+                }
+                
+                
+                testScope();
+                ?>
+            </textarea>
+
+            <br>
+
+
+            <p>
+                <p>Saving State between Function calls with the Static statement:</p>
+            </p>
+            
+            
+            <p>Definition: The static keyword is used to declare a variable with static scope. It retains its value between function calls, allowing for persistent state across calls.</p>
+            
+            
+            <p>Explanation: The static keyword preserves the value of a variable between function calls. It allows a variable to retain its state even after the function finishes execution.</p>
+            
+            
+            <p>Example Program:</p>
+            
+            
+            
+            <textarea name="" id="" cols="30" rows="10">
+                <?php
+                function increment() {
+                    static $count = 0;
+                    $count++;
+                    echo "Count: " . $count . "\n";
+                }
+                
+                
+                increment(); // Output: Count: 1
+                increment(); // Output: Count: 2
+                increment(); // Output: Count: 3
+                ?>
+            </textarea>
+
+
+<br>
+
+            <p>More about arguments:</p>
+            
+            
+            <p>
+                Definition: Functions can accept arguments passed in the parentheses when the function is called. Arguments can be used as input to the function's logic and can be of any data type.
+                
+            </p>
+            
+            <p>
+                Explanation: Function arguments allow us to pass data into a function for processing. They enable us to customize the behavior of a function based on different inputs.
+                
+            </p>
             
 
 
-
-
-
-		
-		
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            
+            <p>Example Program:</p>
+                <textarea name="" id="" cols="30" rows="10">
+                    <?php
+                    function sum(...$numbers) {
+                        $total = 0;
+                        foreach ($numbers as $num) {
+                            $total += $num;
+                        }
+                        return $total;
+                    }
+                    echo sum(1, 2, 3);        // Output: 6
+                    echo sum(10, 20, 30, 40); // Output: 100
+                    ?>
+                </textarea>
+      
+       
       </body>
 </html>
